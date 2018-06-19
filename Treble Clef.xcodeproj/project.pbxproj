@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D620D92A9A0041B13A /* AppDelegate.swift */; };
-		084E10D920D92A9A0041B13A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D820D92A9A0041B13A /* ViewController.swift */; };
+		084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D820D92A9A0041B13A /* MainMenuViewController.swift */; };
 		084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DA20D92A9A0041B13A /* Main.storyboard */; };
 		084E10DE20D92A9B0041B13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DD20D92A9B0041B13A /* Assets.xcassets */; };
 		084E10E120D92A9B0041B13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DF20D92A9B0041B13A /* LaunchScreen.storyboard */; };
+		084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 084E10EC20D92F440041B13A /* GoogleService-Info.plist */; };
+		089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826620D93534006A2DCB /* WelcomeViewController.swift */; };
+		089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826820D9356D006A2DCB /* LogInViewController.swift */; };
+		089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826A20D93639006A2DCB /* RegisterViewController.swift */; };
+		089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826C20D952E4006A2DCB /* IdentifyUser.swift */; };
+		089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826E20D95591006A2DCB /* DefaultsKeys.swift */; };
+		9F91111B5132BEB7DDA2C320 /* Pods_Treble_Clef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		084E10D320D92A9A0041B13A /* Treble Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treble Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		084E10D620D92A9A0041B13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		084E10D820D92A9A0041B13A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		084E10D820D92A9A0041B13A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		084E10DB20D92A9A0041B13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		084E10DD20D92A9B0041B13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		084E10E020D92A9B0041B13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		084E10E220D92A9B0041B13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		084E10EC20D92F440041B13A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		089C826620D93534006A2DCB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		089C826820D9356D006A2DCB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		089C826A20D93639006A2DCB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		089C826C20D952E4006A2DCB /* IdentifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyUser.swift; sourceTree = "<group>"; };
+		089C826E20D95591006A2DCB /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		0DC08BDC5CA0D3C004568D8A /* Pods-Treble Clef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.release.xcconfig"; sourceTree = "<group>"; };
+		2B6C27C27E4D9EBF1CC6DB7A /* Pods-Treble Clef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.debug.xcconfig"; sourceTree = "<group>"; };
+		7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treble_Clef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F91111B5132BEB7DDA2C320 /* Pods_Treble_Clef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,8 @@
 			children = (
 				084E10D520D92A9A0041B13A /* Treble Clef */,
 				084E10D420D92A9A0041B13A /* Products */,
+				7A3077A40A5B687E88B88A3D /* Pods */,
+				43F0E1CC1B1C6E401B0CAF61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,69 @@
 		084E10D520D92A9A0041B13A /* Treble Clef */ = {
 			isa = PBXGroup;
 			children = (
-				084E10D620D92A9A0041B13A /* AppDelegate.swift */,
-				084E10D820D92A9A0041B13A /* ViewController.swift */,
-				084E10DA20D92A9A0041B13A /* Main.storyboard */,
-				084E10DD20D92A9B0041B13A /* Assets.xcassets */,
-				084E10DF20D92A9B0041B13A /* LaunchScreen.storyboard */,
-				084E10E220D92A9B0041B13A /* Info.plist */,
+				084E10EA20D92B0B0041B13A /* View */,
+				084E10E920D92B050041B13A /* Controller */,
+				084E10E820D92AF60041B13A /* Model */,
+				084E10EB20D92B230041B13A /* Support Files */,
 			);
 			path = "Treble Clef";
+			sourceTree = "<group>";
+		};
+		084E10E820D92AF60041B13A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		084E10E920D92B050041B13A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				084E10D620D92A9A0041B13A /* AppDelegate.swift */,
+				089C826C20D952E4006A2DCB /* IdentifyUser.swift */,
+				084E10D820D92A9A0041B13A /* MainMenuViewController.swift */,
+				089C826620D93534006A2DCB /* WelcomeViewController.swift */,
+				089C826A20D93639006A2DCB /* RegisterViewController.swift */,
+				089C826820D9356D006A2DCB /* LogInViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		084E10EA20D92B0B0041B13A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				084E10DA20D92A9A0041B13A /* Main.storyboard */,
+				084E10DF20D92A9B0041B13A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		084E10EB20D92B230041B13A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				084E10DD20D92A9B0041B13A /* Assets.xcassets */,
+				084E10EC20D92F440041B13A /* GoogleService-Info.plist */,
+				084E10E220D92A9B0041B13A /* Info.plist */,
+				089C826E20D95591006A2DCB /* DefaultsKeys.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		43F0E1CC1B1C6E401B0CAF61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A3077A40A5B687E88B88A3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C27C27E4D9EBF1CC6DB7A /* Pods-Treble Clef.debug.xcconfig */,
+				0DC08BDC5CA0D3C004568D8A /* Pods-Treble Clef.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 084E10E520D92A9B0041B13A /* Build configuration list for PBXNativeTarget "Treble Clef" */;
 			buildPhases = (
+				BE43AFD2BEB3B17780981264 /* [CP] Check Pods Manifest.lock */,
 				084E10CF20D92A9A0041B13A /* Sources */,
 				084E10D020D92A9A0041B13A /* Frameworks */,
 				084E10D120D92A9A0041B13A /* Resources */,
+				411644FBFF2624A5DC8A14F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				084E10E120D92A9B0041B13A /* LaunchScreen.storyboard in Resources */,
+				084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */,
 				084E10DE20D92A9B0041B13A /* Assets.xcassets in Resources */,
 				084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */,
 			);
@@ -130,12 +207,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		411644FBFF2624A5DC8A14F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE43AFD2BEB3B17780981264 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Treble Clef-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		084E10CF20D92A9A0041B13A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				084E10D920D92A9A0041B13A /* ViewController.swift in Sources */,
+				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
+				089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */,
+				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,
+				089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */,
+				089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */,
+				084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */,
 				084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,11 +407,13 @@
 		};
 		084E10E620D92A9B0041B13A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B6C27C27E4D9EBF1CC6DB7A /* Pods-Treble Clef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V49K9723TN;
-				INFOPLIST_FILE = "Treble Clef/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Treble Clef/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,17 +421,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.janossandor.Treble-Clef";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		084E10E720D92A9B0041B13A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC08BDC5CA0D3C004568D8A /* Pods-Treble Clef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V49K9723TN;
-				INFOPLIST_FILE = "Treble Clef/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Treble Clef/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.janossandor.Treble-Clef";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>551081494905-chmj9datns2kqujhq7nrfo4oabislkgl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.551081494905-chmj9datns2kqujhq7nrfo4oabislkgl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAXgxdLMVaszoAdwx2KJWdvCUU2Om1AaMw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>551081494905</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.janossandor.Treble-Clef</string>
+	<key>PROJECT_ID</key>
+	<string>treble-clef-ecc98</string>
+	<key>STORAGE_BUCKET</key>
+	<string>treble-clef-ecc98.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:551081494905:ios:b4604c7cd9be84b7</string>
+	<key>DATABASE_URL</key>
+	<string>https://treble-clef-ecc98.firebaseio.com</string>
+</dict>
+</plist>
