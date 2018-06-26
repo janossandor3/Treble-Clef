@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0D20E22BC5002068C4 /* EnumCollection.swift */; };
+		08341C1020E232D6002068C4 /* BirdCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0F20E232D6002068C4 /* BirdCoordinates.swift */; };
+		08341C1220E26259002068C4 /* BirdTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1120E26259002068C4 /* BirdTextures.swift */; };
+		08341C1620E26A33002068C4 /* birdRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1320E26A33002068C4 /* birdRed.atlas */; };
+		08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1420E26A33002068C4 /* birdYellow.atlas */; };
+		08341C1820E26A33002068C4 /* birdBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1520E26A33002068C4 /* birdBlue.atlas */; };
 		084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D620D92A9A0041B13A /* AppDelegate.swift */; };
 		084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D820D92A9A0041B13A /* MainMenuViewController.swift */; };
 		084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DA20D92A9A0041B13A /* Main.storyboard */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08341C0D20E22BC5002068C4 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		08341C0F20E232D6002068C4 /* BirdCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCoordinates.swift; sourceTree = "<group>"; };
+		08341C1120E26259002068C4 /* BirdTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTextures.swift; sourceTree = "<group>"; };
+		08341C1320E26A33002068C4 /* birdRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdRed.atlas; sourceTree = "<group>"; };
+		08341C1420E26A33002068C4 /* birdYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdYellow.atlas; sourceTree = "<group>"; };
+		08341C1520E26A33002068C4 /* birdBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdBlue.atlas; sourceTree = "<group>"; };
 		084E10D320D92A9A0041B13A /* Treble Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treble Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		084E10D620D92A9A0041B13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		084E10D820D92A9A0041B13A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +76,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08341C1920E26B31002068C4 /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+				084E10DD20D92A9B0041B13A /* Assets.xcassets */,
+				08341C1520E26A33002068C4 /* birdBlue.atlas */,
+				08341C1320E26A33002068C4 /* birdRed.atlas */,
+				08341C1420E26A33002068C4 /* birdYellow.atlas */,
+			);
+			path = "Image Assets";
+			sourceTree = "<group>";
+		};
 		084E10CA20D92A9A0041B13A = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +113,7 @@
 				084E10E920D92B050041B13A /* Controller */,
 				084E10E820D92AF60041B13A /* Model */,
 				084E10EB20D92B230041B13A /* Support Files */,
+				08341C1920E26B31002068C4 /* Image Assets */,
 			);
 			path = "Treble Clef";
 			sourceTree = "<group>";
@@ -131,10 +155,12 @@
 		084E10EB20D92B230041B13A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				084E10DD20D92A9B0041B13A /* Assets.xcassets */,
 				084E10EC20D92F440041B13A /* GoogleService-Info.plist */,
 				084E10E220D92A9B0041B13A /* Info.plist */,
 				089C826E20D95591006A2DCB /* DefaultsKeys.swift */,
+				08341C0D20E22BC5002068C4 /* EnumCollection.swift */,
+				08341C0F20E232D6002068C4 /* BirdCoordinates.swift */,
+				08341C1120E26259002068C4 /* BirdTextures.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -225,8 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				084E10E120D92A9B0041B13A /* LaunchScreen.storyboard in Resources */,
+				08341C1620E26A33002068C4 /* birdRed.atlas in Resources */,
+				08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */,
 				084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */,
 				084E10DE20D92A9B0041B13A /* Assets.xcassets in Resources */,
+				08341C1820E26A33002068C4 /* birdBlue.atlas in Resources */,
 				084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,8 +316,11 @@
 			files = (
 				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
+				08341C1220E26259002068C4 /* BirdTextures.swift in Sources */,
 				08BD41F820E12246005EC831 /* BirdGameLevel1Scene.swift in Sources */,
 				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
+				08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */,
+				08341C1020E232D6002068C4 /* BirdCoordinates.swift in Sources */,
 				089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */,
 				08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */,
 				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,
