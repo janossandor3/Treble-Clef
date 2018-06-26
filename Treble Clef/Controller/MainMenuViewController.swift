@@ -16,11 +16,10 @@ class MainMenuViewController: UIViewController {
         
         let defaults = UserDefaults()
         
-//        var key :String = DefaultsKeys.PROFILE_ID
-        let profileId = defaults.string(forKey: "profile_id_key")
-        if  profileId == nil {
-            performSegue(withIdentifier: "goToWelcome", sender: self)
-        }
+        let profileId = defaults.string(forKey: DefaulsKeys.PROFILE_ID)
+//        if  profileId == nil {
+//            performSegue(withIdentifier: "goToWelcome", sender: self)
+//        }
         
         print("Main Menu")
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,6 +30,9 @@ class MainMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    // nem itt lesz ez a gomb hanem a settingsviewcontrollerben
     @IBAction func LogoutClicked(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -44,6 +46,5 @@ class MainMenuViewController: UIViewController {
         
         performSegue(withIdentifier: "goToWelcome", sender: self)
     }
-    
 }
 

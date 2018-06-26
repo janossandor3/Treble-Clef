@@ -18,6 +18,12 @@
 		089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826A20D93639006A2DCB /* RegisterViewController.swift */; };
 		089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826C20D952E4006A2DCB /* IdentifyUser.swift */; };
 		089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826E20D95591006A2DCB /* DefaultsKeys.swift */; };
+		08BD41ED20E0FAB4005EC831 /* Level01MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */; };
+		08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */; };
+		08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */; };
+		08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */; };
+		08BD41F520E120EB005EC831 /* GameBirdLevel01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */; };
+		08BD41F820E12246005EC831 /* BirdGameLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F720E12246005EC831 /* BirdGameLevel1Scene.swift */; };
 		9F91111B5132BEB7DDA2C320 /* Pods_Treble_Clef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +41,12 @@
 		089C826A20D93639006A2DCB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		089C826C20D952E4006A2DCB /* IdentifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyUser.swift; sourceTree = "<group>"; };
 		089C826E20D95591006A2DCB /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level01MenuViewController.swift; sourceTree = "<group>"; };
+		08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level02MenuViewContoller.swift; sourceTree = "<group>"; };
+		08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level03MenuViewController.swift; sourceTree = "<group>"; };
+		08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBirdLevel01ViewController.swift; sourceTree = "<group>"; };
+		08BD41F720E12246005EC831 /* BirdGameLevel1Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameLevel1Scene.swift; sourceTree = "<group>"; };
 		0DC08BDC5CA0D3C004568D8A /* Pods-Treble Clef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.release.xcconfig"; sourceTree = "<group>"; };
 		2B6C27C27E4D9EBF1CC6DB7A /* Pods-Treble Clef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.debug.xcconfig"; sourceTree = "<group>"; };
 		7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treble_Clef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				084E10EA20D92B0B0041B13A /* View */,
+				08BD41F620E12211005EC831 /* Level1Scenes */,
 				084E10E920D92B050041B13A /* Controller */,
 				084E10E820D92AF60041B13A /* Model */,
 				084E10EB20D92B230041B13A /* Support Files */,
@@ -94,7 +107,12 @@
 				084E10D620D92A9A0041B13A /* AppDelegate.swift */,
 				089C826C20D952E4006A2DCB /* IdentifyUser.swift */,
 				084E10D820D92A9A0041B13A /* MainMenuViewController.swift */,
+				08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */,
+				08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */,
+				08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */,
+				08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */,
 				089C826620D93534006A2DCB /* WelcomeViewController.swift */,
+				08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */,
 				089C826A20D93639006A2DCB /* RegisterViewController.swift */,
 				089C826820D9356D006A2DCB /* LogInViewController.swift */,
 			);
@@ -119,6 +137,14 @@
 				089C826E20D95591006A2DCB /* DefaultsKeys.swift */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		08BD41F620E12211005EC831 /* Level1Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				08BD41F720E12246005EC831 /* BirdGameLevel1Scene.swift */,
+			);
+			path = Level1Scenes;
 			sourceTree = "<group>";
 		};
 		43F0E1CC1B1C6E401B0CAF61 /* Frameworks */ = {
@@ -259,13 +285,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
+				08BD41F820E12246005EC831 /* BirdGameLevel1Scene.swift in Sources */,
+				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
 				089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */,
+				08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */,
 				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,
 				089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */,
 				089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */,
 				084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */,
+				08BD41F520E120EB005EC831 /* GameBirdLevel01ViewController.swift in Sources */,
 				084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */,
+				08BD41ED20E0FAB4005EC831 /* Level01MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
