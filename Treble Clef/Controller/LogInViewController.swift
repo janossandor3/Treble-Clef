@@ -19,9 +19,10 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("Login")
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,8 +31,6 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func LoginButtonClicked(_ sender: Any) {
-        // firebase check és ha a vége el van fogadva akkor segue perform és go MAIN
-        
         SVProgressHUD.show()
         
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
@@ -40,11 +39,17 @@ class LogInViewController: UIViewController {
             if error != nil {
                 print(error!)
             } else {
-                print((user?.user.uid)!)
-                self.delegate?.identifyUser(id: (user?.user.uid)!)
+                let defaults = UserDefaults()
+                let userID = (user?.user.uid)!
+                defaults.set(userID, forKey: DefaulsKeys.PROFILE_ID)
+                self.delegate?.identifyUser(id: userID)
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    @IBAction func backClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

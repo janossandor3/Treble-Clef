@@ -32,10 +32,10 @@ enum BirdXCoordinates5Lines: CGFloat, EnumCollection, CoordinateConverter {
 }
 
 // Y coordinates for standard bird game
-enum BirdNotesCoordinates: EnumCollection {
+enum BirdNote: EnumCollection {
     case doh, re, mi, sol, la
     
-    public static func getNotes(gameMode: Int) -> [BirdNotesCoordinates] {
+    public static func getNotes(gameMode: Int) -> [BirdNote] {
         switch gameMode {
         case 2:
             return [.sol, .la]
@@ -99,7 +99,7 @@ enum BirdNotesCoordinates: EnumCollection {
 }
 
 
-extension BirdNotesCoordinates {
+extension BirdNote {
     var yCoordinates5Lines: [CGFloat] {
         return yValues5Lines.map{$0 / 1000}
     }

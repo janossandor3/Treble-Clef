@@ -10,13 +10,14 @@ import UIKit
 
 class WelcomeViewController: UIViewController, IdentifyUser {
     
+    var delegate : CheckUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        print("Welcome")
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,11 +26,9 @@ class WelcomeViewController: UIViewController, IdentifyUser {
     }
     
     func identifyUser(id: String) {
-        // userdefaultsba itt rakom majd be
-        print("itt vagyok. nem megy a navigation controller? Vagy mi?")
         navigationController?.popToRootViewController(animated: true)
-        
-    }    
+        delegate?.checkUser()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToLogin" {

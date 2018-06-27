@@ -9,42 +9,34 @@
 import UIKit
 import Firebase
 
-class MainMenuViewController: UIViewController {
+class MainMenuViewController: UIViewController, LogoutProtocol {
 
+    var delegate : CheckUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let defaults = UserDefaults()
-        
-        let profileId = defaults.string(forKey: DefaulsKeys.PROFILE_ID)
-//        if  profileId == nil {
-//            performSegue(withIdentifier: "goToWelcome", sender: self)
-//        }
-        
-        print("Main Menu")
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
-    
-    // nem itt lesz ez a gomb hanem a settingsviewcontrollerben
-    @IBAction func LogoutClicked(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            
-            navigationController?.popToRootViewController(animated: true)
-        } catch {
-            print("Cant log out")
-        }
-        // itt kijelentkezünk, meg beállítjuk hogy kijelentkezek meg minden ilyen szar
-        // reset is
-        
-        performSegue(withIdentifier: "goToWelcome", sender: self)
+    func logout() {
+        navigationController?.popToRootViewController(animated: true)
+        delegate?.checkUser()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSettings" {
+            let destinationSettings = segue.destination as! SettingsViewController
+            destinationSettings.delegate = self
+        }
+    }
+    
 }
 

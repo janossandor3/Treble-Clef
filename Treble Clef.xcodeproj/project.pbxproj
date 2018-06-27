@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0D20E22BC5002068C4 /* EnumCollection.swift */; };
-		08341C1020E232D6002068C4 /* BirdCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0F20E232D6002068C4 /* BirdCoordinates.swift */; };
+		08341C1020E232D6002068C4 /* BirdNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0F20E232D6002068C4 /* BirdNote.swift */; };
 		08341C1220E26259002068C4 /* BirdTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1120E26259002068C4 /* BirdTextures.swift */; };
 		08341C1620E26A33002068C4 /* birdRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1320E26A33002068C4 /* birdRed.atlas */; };
 		08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1420E26A33002068C4 /* birdYellow.atlas */; };
 		08341C1820E26A33002068C4 /* birdBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1520E26A33002068C4 /* birdBlue.atlas */; };
+		08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1A20E288B2002068C4 /* LoadingViewController.swift */; };
 		084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D620D92A9A0041B13A /* AppDelegate.swift */; };
 		084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D820D92A9A0041B13A /* MainMenuViewController.swift */; };
 		084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DA20D92A9A0041B13A /* Main.storyboard */; };
@@ -24,6 +25,15 @@
 		089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826A20D93639006A2DCB /* RegisterViewController.swift */; };
 		089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826C20D952E4006A2DCB /* IdentifyUser.swift */; };
 		089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826E20D95591006A2DCB /* DefaultsKeys.swift */; };
+		08AE09F720E37FBF00DB74C5 /* CheckUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09F620E37FBF00DB74C5 /* CheckUser.swift */; };
+		08AE09F920E3805B00DB74C5 /* LogoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */; };
+		08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09FA20E38FBA00DB74C5 /* Bird.swift */; };
+		08AE0A0220E3BC7F00DB74C5 /* mi.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE09FD20E3BC7E00DB74C5 /* mi.wav */; };
+		08AE0A0320E3BC7F00DB74C5 /* do.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE09FE20E3BC7E00DB74C5 /* do.wav */; };
+		08AE0A0420E3BC7F00DB74C5 /* re.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE09FF20E3BC7E00DB74C5 /* re.wav */; };
+		08AE0A0520E3BC7F00DB74C5 /* la.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE0A0020E3BC7E00DB74C5 /* la.wav */; };
+		08AE0A0620E3BC7F00DB74C5 /* sol.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE0A0120E3BC7F00DB74C5 /* sol.wav */; };
+		08AE0A0820E3C8DC00DB74C5 /* NodeRemovedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */; };
 		08BD41ED20E0FAB4005EC831 /* Level01MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */; };
 		08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */; };
 		08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */; };
@@ -35,11 +45,12 @@
 
 /* Begin PBXFileReference section */
 		08341C0D20E22BC5002068C4 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
-		08341C0F20E232D6002068C4 /* BirdCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCoordinates.swift; sourceTree = "<group>"; };
+		08341C0F20E232D6002068C4 /* BirdNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdNote.swift; sourceTree = "<group>"; };
 		08341C1120E26259002068C4 /* BirdTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTextures.swift; sourceTree = "<group>"; };
 		08341C1320E26A33002068C4 /* birdRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdRed.atlas; sourceTree = "<group>"; };
 		08341C1420E26A33002068C4 /* birdYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdYellow.atlas; sourceTree = "<group>"; };
 		08341C1520E26A33002068C4 /* birdBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdBlue.atlas; sourceTree = "<group>"; };
+		08341C1A20E288B2002068C4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		084E10D320D92A9A0041B13A /* Treble Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treble Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		084E10D620D92A9A0041B13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		084E10D820D92A9A0041B13A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +64,15 @@
 		089C826A20D93639006A2DCB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		089C826C20D952E4006A2DCB /* IdentifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyUser.swift; sourceTree = "<group>"; };
 		089C826E20D95591006A2DCB /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		08AE09F620E37FBF00DB74C5 /* CheckUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUser.swift; sourceTree = "<group>"; };
+		08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutProtocol.swift; sourceTree = "<group>"; };
+		08AE09FA20E38FBA00DB74C5 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		08AE09FD20E3BC7E00DB74C5 /* mi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mi.wav; sourceTree = "<group>"; };
+		08AE09FE20E3BC7E00DB74C5 /* do.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = do.wav; sourceTree = "<group>"; };
+		08AE09FF20E3BC7E00DB74C5 /* re.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = re.wav; sourceTree = "<group>"; };
+		08AE0A0020E3BC7E00DB74C5 /* la.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = la.wav; sourceTree = "<group>"; };
+		08AE0A0120E3BC7F00DB74C5 /* sol.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sol.wav; sourceTree = "<group>"; };
+		08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRemovedProtocol.swift; sourceTree = "<group>"; };
 		08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level01MenuViewController.swift; sourceTree = "<group>"; };
 		08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level02MenuViewContoller.swift; sourceTree = "<group>"; };
 		08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level03MenuViewController.swift; sourceTree = "<group>"; };
@@ -108,11 +128,13 @@
 		084E10D520D92A9A0041B13A /* Treble Clef */ = {
 			isa = PBXGroup;
 			children = (
+				084E10D620D92A9A0041B13A /* AppDelegate.swift */,
 				084E10EA20D92B0B0041B13A /* View */,
 				08BD41F620E12211005EC831 /* Level1Scenes */,
 				084E10E920D92B050041B13A /* Controller */,
 				084E10E820D92AF60041B13A /* Model */,
 				084E10EB20D92B230041B13A /* Support Files */,
+				08AE09FC20E3BBD500DB74C5 /* Sound files */,
 				08341C1920E26B31002068C4 /* Image Assets */,
 			);
 			path = "Treble Clef";
@@ -121,6 +143,7 @@
 		084E10E820D92AF60041B13A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				08AE09FA20E38FBA00DB74C5 /* Bird.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,15 +151,15 @@
 		084E10E920D92B050041B13A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				084E10D620D92A9A0041B13A /* AppDelegate.swift */,
-				089C826C20D952E4006A2DCB /* IdentifyUser.swift */,
+				08AE09F420E37A6B00DB74C5 /* Protocols */,
 				084E10D820D92A9A0041B13A /* MainMenuViewController.swift */,
+				08341C1A20E288B2002068C4 /* LoadingViewController.swift */,
 				08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */,
 				08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */,
 				08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */,
 				08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */,
-				089C826620D93534006A2DCB /* WelcomeViewController.swift */,
 				08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */,
+				089C826620D93534006A2DCB /* WelcomeViewController.swift */,
 				089C826A20D93639006A2DCB /* RegisterViewController.swift */,
 				089C826820D9356D006A2DCB /* LogInViewController.swift */,
 			);
@@ -159,10 +182,33 @@
 				084E10E220D92A9B0041B13A /* Info.plist */,
 				089C826E20D95591006A2DCB /* DefaultsKeys.swift */,
 				08341C0D20E22BC5002068C4 /* EnumCollection.swift */,
-				08341C0F20E232D6002068C4 /* BirdCoordinates.swift */,
+				08341C0F20E232D6002068C4 /* BirdNote.swift */,
 				08341C1120E26259002068C4 /* BirdTextures.swift */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		08AE09F420E37A6B00DB74C5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				089C826C20D952E4006A2DCB /* IdentifyUser.swift */,
+				08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */,
+				08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */,
+				08AE09F620E37FBF00DB74C5 /* CheckUser.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		08AE09FC20E3BBD500DB74C5 /* Sound files */ = {
+			isa = PBXGroup;
+			children = (
+				08AE09FE20E3BC7E00DB74C5 /* do.wav */,
+				08AE0A0020E3BC7E00DB74C5 /* la.wav */,
+				08AE09FD20E3BC7E00DB74C5 /* mi.wav */,
+				08AE09FF20E3BC7E00DB74C5 /* re.wav */,
+				08AE0A0120E3BC7F00DB74C5 /* sol.wav */,
+			);
+			path = "Sound files";
 			sourceTree = "<group>";
 		};
 		08BD41F620E12211005EC831 /* Level1Scenes */ = {
@@ -250,11 +296,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AE0A0320E3BC7F00DB74C5 /* do.wav in Resources */,
+				08AE0A0220E3BC7F00DB74C5 /* mi.wav in Resources */,
 				084E10E120D92A9B0041B13A /* LaunchScreen.storyboard in Resources */,
 				08341C1620E26A33002068C4 /* birdRed.atlas in Resources */,
 				08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */,
+				08AE0A0420E3BC7F00DB74C5 /* re.wav in Resources */,
 				084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */,
 				084E10DE20D92A9B0041B13A /* Assets.xcassets in Resources */,
+				08AE0A0520E3BC7F00DB74C5 /* la.wav in Resources */,
+				08AE0A0620E3BC7F00DB74C5 /* sol.wav in Resources */,
 				08341C1820E26A33002068C4 /* birdBlue.atlas in Resources */,
 				084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */,
 			);
@@ -314,13 +365,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AE09F920E3805B00DB74C5 /* LogoutProtocol.swift in Sources */,
 				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
+				08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */,
 				08341C1220E26259002068C4 /* BirdTextures.swift in Sources */,
 				08BD41F820E12246005EC831 /* BirdGameLevel1Scene.swift in Sources */,
+				08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */,
+				08AE09F720E37FBF00DB74C5 /* CheckUser.swift in Sources */,
 				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
 				08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */,
-				08341C1020E232D6002068C4 /* BirdCoordinates.swift in Sources */,
+				08341C1020E232D6002068C4 /* BirdNote.swift in Sources */,
+				08AE0A0820E3C8DC00DB74C5 /* NodeRemovedProtocol.swift in Sources */,
 				089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */,
 				08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */,
 				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,
