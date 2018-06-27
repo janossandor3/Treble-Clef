@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Firebase
 import SpriteKit
 
 class GameBirdLevel01ViewController: UIViewController, BirdGameLevel1Protocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = BirdGameLevel1Scene(size: view.bounds.size)
+        let scene = BirdGameLevel1Scene(size: view.bounds.size, scoreToEarn: BirdXCoordinates5Lines.allValues.count)
         scene.gameDelegate = self
         self.view = SKView(frame: CGRect(x: view.bounds.maxX * 0.5, y: view.bounds.maxY * 0.5, width: view.bounds.maxX, height: view.bounds.maxY))
         let skView = view as! SKView
@@ -32,7 +33,11 @@ class GameBirdLevel01ViewController: UIViewController, BirdGameLevel1Protocol {
         return true
     }
     
-    func finishGame() {
+    func finishGame(scoreEarned: Int) {
+        let ref: DatabaseReference! = Database.database().reference()
+        let userID = (Auth.auth().currentUser?.uid)!
+        ref.child("Users").child(userID).setValue(["user_level": scoreEarned == BirdXCoordinates5Lines.allValues.count ? 2 : 1])
+
         navigationController?.popViewController(animated: true)
     }
 }

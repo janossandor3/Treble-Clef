@@ -10,17 +10,27 @@ import SpriteKit
 import Firebase
 
 protocol BirdGameLevel1Protocol {
-    func finishGame()
+    func finishGame(scoreEarned: Int)
 }
 
 class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
     
     private let FINISH_BUTTON = "finish_button"
+    private let BACK_BUTTON = "back_button"
     
     var gameDelegate : BirdGameLevel1Protocol?
     
-    let scoreToEarn: Int = BirdXCoordinates5Lines.allValues.count
+    let scoreToEarn: Int
     var score: Int = 0
+    
+    init(size: CGSize, scoreToEarn: Int) {
+        self.scoreToEarn = scoreToEarn
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func didMove(to view: SKView) {
         initBackground()
@@ -32,6 +42,13 @@ class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
         background.size = CGSize(width: self.frame.width, height: self.frame.height)
         background.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         addChild(background)
+        
+        let backSignPost = SKSpriteNode(imageNamed: "backSignPost")
+        backSignPost.name = BACK_BUTTON
+        backSignPost.zPosition = 10
+        backSignPost.size = CGSize(width: self.frame.width / 10, height: self.frame.height / 8)
+        backSignPost.position = CGPoint(x: self.frame.width / 14, y: self.frame.height / 15)
+        addChild(backSignPost)
     }
     
     func initBirds() {
@@ -80,8 +97,8 @@ class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
             let location = touch.location(in: self)
             let touchedNode = self.atPoint(location)
             if let name = touchedNode.name {
-                if name == FINISH_BUTTON{
-                    gameDelegate?.finishGame()
+                if name == BACK_BUTTON || name == FINISH_BUTTON {
+                    gameDelegate?.finishGame(scoreEarned: score)
                 }
             }
             

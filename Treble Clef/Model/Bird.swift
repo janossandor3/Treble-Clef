@@ -80,7 +80,7 @@ class Bird: SKSpriteNode {
         isUserInteractionEnabled = false
         delegate?.nodeRemoved()
         flyOff()
-//        playNote() // uncomment when not testing
+        playNote() // uncomment when not testing
     }
 }
 

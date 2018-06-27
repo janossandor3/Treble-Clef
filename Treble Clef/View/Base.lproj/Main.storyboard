@@ -50,14 +50,19 @@
                                     <segue destination="7tz-Fj-HCo" kind="presentation" identifier="goToRegistration" id="a08-WZ-fYB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wlakingCat01" translatesAutoresizingMaskIntoConstraints="NO" id="phT-Fq-paE">
-                                <rect key="frame" x="58" y="367" width="366" height="276"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ED-VC-F0j">
+                                <rect key="frame" x="83" y="361" width="331" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="birdYellowFlying" translatesAutoresizingMaskIntoConstraints="NO" id="Zgx-vy-RZe">
-                                <rect key="frame" x="204" y="42" width="286" height="252"/>
+                                <state key="normal" backgroundImage="wlakingCat01"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgM-YM-Sju">
+                                <rect key="frame" x="262" y="84" width="319" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" backgroundImage="birdYellowFlying"/>
+                                <connections>
+                                    <segue destination="wMq-ve-1E1" kind="show" id="Gm8-Uj-Kdj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -170,6 +175,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGd-DM-1xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="817" y="768"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vWa-1y-Gov">
+            <objects>
+                <viewController id="wMq-ve-1E1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNi-rs-alf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rainbowBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1KO-Pt-gIO">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="as5-By-p5U">
+                                <rect key="frame" x="283" y="117" width="458" height="535"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QAU-W6-HMl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paj-cE-CnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2770" y="-2713"/>
         </scene>
         <!--Log In-->
         <scene sceneID="y9g-eq-3Xj">
@@ -397,9 +428,16 @@
                                 <rect key="frame" x="672" y="165" width="266" height="230.5"/>
                                 <color key="backgroundColor" red="0.095127709209918976" green="0.6492648720741272" blue="0.13968059420585632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="55T-Cj-6Ka" kind="show" id="k0h-hr-vFT"/>
+                                    <segue destination="wMq-ve-1E1" kind="show" id="imZ-HZ-daQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRJ-f8-VZv">
+                                <rect key="frame" x="647" y="486" width="258" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -414,10 +452,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6bJ-Pe-K0K"/>
                     </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="GRJ-f8-VZv" id="wPT-H4-ayV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hEt-5S-0WC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="-2711"/>
+            <point key="canvasLocation" x="1856.8359374999998" y="-2711.71875"/>
         </scene>
         <!--Game Bird Level 01-->
         <scene sceneID="GBK-c4-gmf">
@@ -432,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEu-nR-nYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3262" y="-2711"/>
+            <point key="canvasLocation" x="3715" y="-2712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bUX-PS-HlS">
@@ -552,6 +593,7 @@
         <image name="wlakingCat01" width="249" height="219"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="imZ-HZ-daQ"/>
         <segue reference="Nfx-4r-8y8"/>
     </inferredMetricsTieBreakers>
 </document>
