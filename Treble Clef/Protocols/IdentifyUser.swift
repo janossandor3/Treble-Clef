@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IdentifyUser {
+protocol IdentifyUser: class {
     func identifyUser (id: String)
 }

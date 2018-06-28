@@ -15,10 +15,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
-    var delegate : IdentifyUser?
+    weak var delegate : IdentifyUser?
+    let viewModel = RegisterViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,47 +34,43 @@ class RegisterViewController: UIViewController {
     
     @IBAction func RegisterButtonCliked(_ sender: Any) {
         SVProgressHUD.show()
-        
-        if (!isValidPasswordString(pwdStr: passwordTextfield.text!)) {
-            showPasswordErrorPopup()
-            SVProgressHUD.dismiss()
-            return
-        }
-        
-        // itt jön a saját ellenőrzésem passwordre (bár lehet hogy a firebasebe be lehet állítani hogy mondjuk minimum 6 karakter és kellenek bele betűk és számok)
-        
-        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
-            SVProgressHUD.dismiss()
-            
-            if error != nil {
-                self.passwordTextfield.text = ""
-                self.showEmailErrorPopup()
-                print(error!)
-            } else {
-                let defaults = UserDefaults()
-                let userID = (user?.user.uid)!
-                // itt jönne az hogy a demo cuccból elkérjük az adatokat
-                // aztán csinálunk egy új üres profile-t, és az adatokkal (ha volt) feltöltjük azt
-                // utána töröljük az ideiglenes adatokat és a UserDefaultsban beállítjuk (vagy hol) mondjuk ID alapján a a currentUsert
-                // ezt fogjuk majd mondjuk belépésnél is ellenőrizni. Ha nem nil az ID akkor MainMenure menjünk egyből.
-                
-                let ref: DatabaseReference! = Database.database().reference()
-                ref.child("Users").child(userID).setValue(["user_level": 1])
-                
-                defaults.set(userID, forKey: DefaulsKeys.PROFILE_ID)
-                self.delegate?.identifyUser(id: userID)
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
+        viewModel.signUp(email: emailTextfield.text!, password: passwordTextfield.text!)
     }
+    
+    @IBAction func backClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
 
-    func isValidPasswordString(pwdStr:String) -> Bool {
-        let pwdRegEx = "(?=.*[0-9])(?=.*[a-z])[A-Za-z0-9]{6,15}"
-        
-        // kell egy szám, egy kisbetű és min 6 max 15
-        
-        let pwdTest = NSPredicate(format:"SELF MATCHES %@", pwdRegEx)
-        return pwdTest.evaluate(with: pwdStr)
+extension RegisterViewController: RegisterProtocol {
+    
+    func signUp(userId: String) {
+        SVProgressHUD.dismiss()
+        self.delegate?.identifyUser(id: userId)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func signUpError(error: String) {
+        passwordTextfield.text = ""
+        SVProgressHUD.dismiss()
+        showErrorPopup(error: error)
+    }
+    
+    func emailError() {
+        SVProgressHUD.dismiss()
+        showEmailErrorPopup()
+    }
+    
+    func passwordError() {
+        SVProgressHUD.dismiss()
+        showPasswordErrorPopup()
+    }
+    
+    func showErrorPopup(error: String) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showEmailErrorPopup() {
@@ -87,7 +85,4 @@ class RegisterViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func backClicked(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
 }

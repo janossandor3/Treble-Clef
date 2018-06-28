@@ -10,7 +10,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController, IdentifyUser {
     
-    var delegate : CheckUser?
+    weak var delegate : CheckUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class WelcomeViewController: UIViewController, IdentifyUser {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToLogin" {
-            let destinationVC = segue.destination as! LogInViewController
+            let destinationVC = segue.destination as! LoginViewController
             destinationVC.delegate = self
         } else if segue.identifier == "goToRegistration" {
             let destinationVC = segue.destination as! RegisterViewController

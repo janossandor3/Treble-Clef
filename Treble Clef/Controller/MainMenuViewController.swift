@@ -11,7 +11,7 @@ import Firebase
 
 class MainMenuViewController: UIViewController, LogoutProtocol {
 
-    var delegate : CheckUser?
+    weak var delegate : CheckUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()

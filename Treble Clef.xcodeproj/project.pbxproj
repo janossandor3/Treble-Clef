@@ -20,8 +20,15 @@
 		084E10DE20D92A9B0041B13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DD20D92A9B0041B13A /* Assets.xcassets */; };
 		084E10E120D92A9B0041B13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DF20D92A9B0041B13A /* LaunchScreen.storyboard */; };
 		084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 084E10EC20D92F440041B13A /* GoogleService-Info.plist */; };
+		0870ED0520E4FEF9001CEB22 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */; };
+		0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0720E50561001CEB22 /* FirebaseService.swift */; };
+		0870ED0B20E505B5001CEB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0A20E505B5001CEB22 /* User.swift */; };
+		0870ED0E20E51360001CEB22 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0D20E51360001CEB22 /* LoginProtocol.swift */; };
+		0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */; };
+		0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */; };
+		0870ED1420E51E61001CEB22 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1320E51E61001CEB22 /* String.swift */; };
 		089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826620D93534006A2DCB /* WelcomeViewController.swift */; };
-		089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826820D9356D006A2DCB /* LogInViewController.swift */; };
+		089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826820D9356D006A2DCB /* LoginViewController.swift */; };
 		089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826A20D93639006A2DCB /* RegisterViewController.swift */; };
 		089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826C20D952E4006A2DCB /* IdentifyUser.swift */; };
 		089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826E20D95591006A2DCB /* DefaultsKeys.swift */; };
@@ -59,8 +66,15 @@
 		084E10E020D92A9B0041B13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		084E10E220D92A9B0041B13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		084E10EC20D92F440041B13A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0870ED0720E50561001CEB22 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		0870ED0A20E505B5001CEB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0870ED0D20E51360001CEB22 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
+		0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		0870ED1320E51E61001CEB22 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		089C826620D93534006A2DCB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		089C826820D9356D006A2DCB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		089C826820D9356D006A2DCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		089C826A20D93639006A2DCB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		089C826C20D952E4006A2DCB /* IdentifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyUser.swift; sourceTree = "<group>"; };
 		089C826E20D95591006A2DCB /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
@@ -131,6 +145,10 @@
 				084E10D620D92A9A0041B13A /* AppDelegate.swift */,
 				084E10EA20D92B0B0041B13A /* View */,
 				08BD41F620E12211005EC831 /* Level1Scenes */,
+				08AE09F420E37A6B00DB74C5 /* Protocols */,
+				0870ED0220E4FED7001CEB22 /* Extensions */,
+				0870ED0620E50549001CEB22 /* Services */,
+				0870ED0320E4FEE1001CEB22 /* ViewModels */,
 				084E10E920D92B050041B13A /* Controller */,
 				084E10E820D92AF60041B13A /* Model */,
 				084E10EB20D92B230041B13A /* Support Files */,
@@ -144,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				08AE09FA20E38FBA00DB74C5 /* Bird.swift */,
+				0870ED0A20E505B5001CEB22 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,7 +170,6 @@
 		084E10E920D92B050041B13A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				08AE09F420E37A6B00DB74C5 /* Protocols */,
 				084E10D820D92A9A0041B13A /* MainMenuViewController.swift */,
 				08341C1A20E288B2002068C4 /* LoadingViewController.swift */,
 				08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */,
@@ -161,7 +179,7 @@
 				08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */,
 				089C826620D93534006A2DCB /* WelcomeViewController.swift */,
 				089C826A20D93639006A2DCB /* RegisterViewController.swift */,
-				089C826820D9356D006A2DCB /* LogInViewController.swift */,
+				089C826820D9356D006A2DCB /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,11 +206,38 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
+		0870ED0220E4FED7001CEB22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0870ED1320E51E61001CEB22 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0870ED0320E4FEE1001CEB22 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */,
+				0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0870ED0620E50549001CEB22 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0870ED0720E50561001CEB22 /* FirebaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		08AE09F420E37A6B00DB74C5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				089C826C20D952E4006A2DCB /* IdentifyUser.swift */,
 				08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */,
+				0870ED0D20E51360001CEB22 /* LoginProtocol.swift */,
+				0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */,
 				08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */,
 				08AE09F620E37FBF00DB74C5 /* CheckUser.swift */,
 			);
@@ -366,7 +411,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				08AE09F920E3805B00DB74C5 /* LogoutProtocol.swift in Sources */,
+				0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */,
 				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
+				0870ED0520E4FEF9001CEB22 /* LoginViewModel.swift in Sources */,
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
 				08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */,
 				08341C1220E26259002068C4 /* BirdTextures.swift in Sources */,
@@ -375,14 +422,19 @@
 				08AE09F720E37FBF00DB74C5 /* CheckUser.swift in Sources */,
 				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
 				08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */,
+				0870ED0E20E51360001CEB22 /* LoginProtocol.swift in Sources */,
 				08341C1020E232D6002068C4 /* BirdNote.swift in Sources */,
 				08AE0A0820E3C8DC00DB74C5 /* NodeRemovedProtocol.swift in Sources */,
-				089C826920D9356D006A2DCB /* LogInViewController.swift in Sources */,
+				089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */,
+				0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */,
 				08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */,
+				0870ED1420E51E61001CEB22 /* String.swift in Sources */,
 				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,
 				089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */,
 				089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */,
+				0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */,
 				084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */,
+				0870ED0B20E505B5001CEB22 /* User.swift in Sources */,
 				08BD41F520E120EB005EC831 /* GameBirdLevel01ViewController.swift in Sources */,
 				084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */,
 				08BD41ED20E0FAB4005EC831 /* Level01MenuViewController.swift in Sources */,

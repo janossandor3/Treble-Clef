@@ -10,15 +10,17 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LogInViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
-    var delegate : IdentifyUser?
+    weak var delegate : IdentifyUser?
+    let viewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,24 +34,33 @@ class LogInViewController: UIViewController {
     
     @IBAction func LoginButtonClicked(_ sender: Any) {
         SVProgressHUD.show()
-        
-        Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
-            SVProgressHUD.dismiss()
-            
-            if error != nil {
-                print(error!)
-            } else {
-                let defaults = UserDefaults()
-                let userID = (user?.user.uid)!
-                defaults.set(userID, forKey: DefaulsKeys.PROFILE_ID)
-                self.delegate?.identifyUser(id: userID)
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
+        viewModel.login(email: emailTextfield.text!, password: passwordTextfield.text!)
     }
     
     @IBAction func backClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension LoginViewController: LoginProtocol {
+    
+    func login(userId: String) {
+        SVProgressHUD.dismiss()
+        self.delegate?.identifyUser(id: userId)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func loginError(error: String) {
+        SVProgressHUD.dismiss()
+        showErrorPopup(error: error)
+    }
+    
+    // hova lehet az ilyeneket kiszervezni?
+    func showErrorPopup(error: String) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  LogoutProtocol.swift
+//  NodeRemovedProtocol.swift
 //  Treble Clef
 //
 //  Created by iMind on 2018. 06. 27..
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LogoutProtocol {
-    func logout()
+protocol NodeRemovedProtocol: class {
+    func nodeRemoved()
 }

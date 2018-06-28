@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CheckUser {
+protocol CheckUser: class {
     func checkUser()
 }

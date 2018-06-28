@@ -14,7 +14,7 @@ import SVProgressHUD
 
 class SettingsViewController: UIViewController {
     
-    var delegate: LogoutProtocol?
+    weak var delegate: LogoutProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

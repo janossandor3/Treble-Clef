@@ -13,7 +13,6 @@ class Level01MenuViewController: UIViewController {
     
     @IBOutlet weak var levelLabel: UILabel! // jó ez full kamu, nem fog kelleni
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

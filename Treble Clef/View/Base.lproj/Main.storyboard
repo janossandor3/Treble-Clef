@@ -205,7 +205,7 @@
         <!--Log In-->
         <scene sceneID="y9g-eq-3Xj">
             <objects>
-                <viewController storyboardIdentifier="logInVC" id="lD4-hd-x8t" customClass="LogInViewController" customModule="Treble_Clef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInVC" id="lD4-hd-x8t" customClass="LoginViewController" customModule="Treble_Clef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7TM-t3-VHk"/>
                         <viewControllerLayoutGuide type="bottom" id="kmj-YT-dGn"/>
