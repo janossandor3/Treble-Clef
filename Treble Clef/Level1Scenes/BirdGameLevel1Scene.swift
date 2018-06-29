@@ -19,6 +19,7 @@ class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
     private let BACK_BUTTON = "back_button"
     
     var gameDelegate : BirdGameLevel1Protocol?
+    var song: Song?
     
     let scoreToEarn: Int
     var score: Int = 0
@@ -52,16 +53,17 @@ class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
     }
     
     func initBirds() {
-        for i in 0...scoreToEarn - 1 {
-            let randomNote = Int(arc4random_uniform(UInt32(BirdNote.getNotes(gameMode: 5).count)))
-            let note = BirdNote.getNotes(gameMode: 5)[randomNote]
-            let x = size.width * BirdXCoordinates5Lines.allValues[i].multiplier()
-            let y = size.height * note.yCoordinates5Lines[i]
-            
-            let bird = Bird(frameHeight: self.frame.height, frameWidth: self.frame.width, x: x, birdNote: note)
-            bird.delegate = self
-            addChild(bird)
-            bird.flyDown(x: x, y: y)
+        if let selectedSong = song {
+            for i in 0...scoreToEarn - 1 {
+                let note: BirdNote = selectedSong.name == "Random" ? BirdNote.getNotes(gameMode: 5)[Int(arc4random_uniform(UInt32(BirdNote.getNotes(gameMode: 5).count)))] : selectedSong.notes[i]
+                let x = size.width * BirdXCoordinates5Lines.allValues[i].multiplier()
+                let y = size.height * note.yCoordinates5Lines[i]
+                
+                let bird = Bird(frameHeight: self.frame.height, frameWidth: self.frame.width, x: x, birdNote: note)
+                bird.delegate = self
+                addChild(bird)
+                bird.flyDown(x: x, y: y)
+            }
         }
     }
     

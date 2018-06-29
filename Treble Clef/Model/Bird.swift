@@ -80,13 +80,6 @@ class Bird: SKSpriteNode {
         isUserInteractionEnabled = false
         delegate?.nodeRemoved()
         flyOff()
-//        playNote() // uncomment when not testing
-    }
-}
-
-extension ClosedRange where Bound : FloatingPoint {
-    public func random() -> Bound {
-        let max = UInt32.max
-        return Bound(arc4random_uniform(max)) / Bound(max) * (upperBound - lowerBound) + lowerBound
+        playNote()
     }
 }

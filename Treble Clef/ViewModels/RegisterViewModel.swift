@@ -32,18 +32,7 @@ class RegisterViewModel {
                 self.delegate?.signUpError(error: error!.localizedDescription)
             } else {
                 let userID = (user?.user.uid)!
-                
-                // ezt is ki kéne küldeni a firebase servicebe
-                // itt jönne az hogy a demo cuccból elkérjük az adatokat
-                // aztán csinálunk egy új üres profile-t, és az adatokkal (ha volt) feltöltjük azt
-                // utána töröljük az ideiglenes adatokat és a UserDefaultsban beállítjuk (vagy hol) mondjuk ID alapján a a currentUsert
-                // ezt fogjuk majd mondjuk belépésnél is ellenőrizni. Ha nem nil az ID akkor MainMenure menjünk egyből.
-                
-                let ref: DatabaseReference! = Database.database().reference()
-                ref.child("Users").child(userID).setValue(["user_level": 1])
-                
-                
-                UserDefaults().set(userID, forKey: DefaulsKeys.PROFILE_ID)
+                self.fir.register(userID: userID)
                 self.delegate?.signUp(userId: userID)
             }
         }

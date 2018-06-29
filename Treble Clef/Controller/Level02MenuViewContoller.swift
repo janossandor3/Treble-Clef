@@ -13,6 +13,7 @@ class Level02MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showErrorPopup(error: "These levels are not created yet")
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -12,10 +12,15 @@ import SpriteKit
 
 class GameBirdLevel01ViewController: UIViewController, BirdGameLevel1Protocol {
     
+    var song: Song?
+    let fir = FirebaseService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let scene = BirdGameLevel1Scene(size: view.bounds.size, scoreToEarn: BirdXCoordinates5Lines.allValues.count)
         scene.gameDelegate = self
+        scene.song = song
         self.view = SKView(frame: CGRect(x: view.bounds.maxX * 0.5, y: view.bounds.maxY * 0.5, width: view.bounds.maxX, height: view.bounds.maxY))
         let skView = view as! SKView
         skView.showsFPS = true
@@ -34,10 +39,11 @@ class GameBirdLevel01ViewController: UIViewController, BirdGameLevel1Protocol {
     }
     
     func finishGame(scoreEarned: Int) {
-        let ref: DatabaseReference! = Database.database().reference()
-        let userID = (Auth.auth().currentUser?.uid)!
-        ref.child("Users").child(userID).setValue(["user_level": scoreEarned == BirdXCoordinates5Lines.allValues.count ? 2 : 1])
-
+        // ennek a viewmodelbe kéne kerülne, meg az a hatos szám se jó hogy csak úgy ott van
+        if scoreEarned == 6 {
+            fir.updateUserlevel(userLevel: User.currentUser.userLevel + 1)
+        }
+        
         navigationController?.popViewController(animated: true)
     }
 }

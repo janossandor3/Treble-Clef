@@ -27,7 +27,7 @@ class LoginViewModel {
                 self.delegate?.loginError(error: error!.localizedDescription)
             } else {
                 let userID = (user?.user.uid)!
-                UserDefaults().set(userID, forKey: DefaulsKeys.PROFILE_ID)
+                self.fir.login(userID: userID)
                 self.delegate?.login(userId: userID)
             }
         }

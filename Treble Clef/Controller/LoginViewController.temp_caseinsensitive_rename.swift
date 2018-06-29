@@ -10,17 +10,17 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LoginViewController: UIViewController {
+class LogInViewController: UIViewController, LoginProtocol {
     
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
-    weak var delegate : IdentifyUser?
-    let viewModel = LoginViewModel()
+    var delegate : IdentifyUser?
+    let loginViewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        loginViewModel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,26 +34,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func LoginButtonClicked(_ sender: Any) {
         SVProgressHUD.show()
-        viewModel.login(email: emailTextfield.text!, password: passwordTextfield.text!)
+        loginViewModel.login(email: emailTextfield.text!, password: passwordTextfield.text!)
+    }
+    
+    func login(userId: String?) {
+        SVProgressHUD.dismiss()
+        if let id = userId {
+            self.delegate?.identifyUser(id: id)
+            self.dismiss(animated: true, completion: nil)
+        } // popup
     }
     
     @IBAction func backClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-    }
-    
-}
-
-extension LoginViewController: LoginProtocol {
-    
-    func login(userId: String) {
-        SVProgressHUD.dismiss()
-        self.delegate?.identifyUser(id: userId)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func loginError(error: String) {
-        SVProgressHUD.dismiss()
-        showErrorPopup(error: error)
     }
     
 }

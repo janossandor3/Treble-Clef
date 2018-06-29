@@ -1,0 +1,22 @@
+{
+    "songs": [
+              {
+              "name": "Random"
+              },
+              {
+              "name": "Song 01",
+              "notes": ["doh","re","mi","sol","la","doh"],
+              "keynote": "C"
+              },
+              {
+              "name": "Song 02",
+              "notes": ["re","re","re","sol","sol","sol"],
+              "keynote": "C"
+              },
+              {
+              "name": "Song 03",
+              "notes": ["doh","re","doh","mi","doh","sol"],
+              "keynote": "C"
+              }
+    ]
+}

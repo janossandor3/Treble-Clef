@@ -10,6 +10,7 @@ import Foundation
 import SpriteKit
 
 enum BirdTextures: String, EnumCollection {
+
     case birdBlue = "birdBlueSitting"
     case birdYellow = "birdYellowSitting"
     case birdRed = "birdRedSitting"
