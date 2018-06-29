@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+
+class User {
+    
+    static let currentUser = User()
+    
+    var userID: String?
+    var userLevel: Int = 0
+    
+    private init() {}
+}
+
+extension User {
+    
+    func reset() {
+        self.userID = nil
+        self.userLevel = 0
+    }
+    
+}
