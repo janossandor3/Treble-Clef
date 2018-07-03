@@ -14,12 +14,12 @@ class Bird: SKSpriteNode {
     static let initAction = "INIT_ACTION"
     
     var type: BirdTextures
-    var note: BirdNote
+    var note: PentatonNotes
     var xPosition: CGFloat
     var yHidden: CGFloat
-    var delegate: NodeRemovedProtocol?
+    weak var delegate: NodeRemovedProtocol?
     
-    init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, birdNote: BirdNote) {
+    init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, birdNote: PentatonNotes) {
         type = BirdTextures.allValues[Int(arc4random_uniform(UInt32(BirdTextures.allValues.count)))]
         note = birdNote
         yHidden = frameHeight + frameHeight / 6
@@ -80,6 +80,6 @@ class Bird: SKSpriteNode {
         isUserInteractionEnabled = false
         delegate?.nodeRemoved()
         flyOff()
-        playNote()
+//        playNote()
     }
 }

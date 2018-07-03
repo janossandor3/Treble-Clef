@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class Level01MenuViewController: UIViewController {
     
@@ -22,10 +21,6 @@ class Level01MenuViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func catLevel01Clicked(_ sender: Any) {
-        showErrorPopup(error: "These levels are not created yet")
     }
     
     @IBAction func rainbowLevel01Clicked(_ sender: Any) {

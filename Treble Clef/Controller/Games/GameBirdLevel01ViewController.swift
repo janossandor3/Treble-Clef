@@ -7,18 +7,16 @@
 //
 
 import UIKit
-import Firebase
 import SpriteKit
 
-class GameBirdLevel01ViewController: UIViewController, BirdGameLevel1Protocol {
+class GameBirdLevel01ViewController: UIViewController {
     
     var song: Song?
-    let fir = FirebaseService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = BirdGameLevel1Scene(size: view.bounds.size, scoreToEarn: BirdXCoordinates5Lines.allValues.count)
+        let scene = BirdGameLevel01Scene(size: view.bounds.size, scoreToEarn: BirdXCoordinates5Lines.allValues.count)
         scene.gameDelegate = self
         scene.song = song
         self.view = SKView(frame: CGRect(x: view.bounds.maxX * 0.5, y: view.bounds.maxY * 0.5, width: view.bounds.maxX, height: view.bounds.maxY))
@@ -37,13 +35,12 @@ class GameBirdLevel01ViewController: UIViewController, BirdGameLevel1Protocol {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+}
+
+extension GameBirdLevel01ViewController: BirdGameLevel01Protocol {
     
     func finishGame(scoreEarned: Int) {
-        // ennek a viewmodelbe kéne kerülne, meg az a hatos szám se jó hogy csak úgy ott van
-        if scoreEarned == 6 {
-            fir.updateUserlevel(userLevel: User.currentUser.userLevel + 1)
-        }
-        
         navigationController?.popViewController(animated: true)
     }
+    
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class Level03MenuViewController: UIViewController {
     

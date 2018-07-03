@@ -12,20 +12,20 @@ class Song {
     
     let name: String
     let keynote: String
-    var notes: [BirdNote] = []
+    var notes: [PentatonNotes] = []
     
     init(name: String, notes: [String], keynote: String) {
         self.name = name // és ha nincs? ezeket majd lekezelem
         self.keynote = keynote
-        self.notes = getBirdnotes(notes: notes)
+        self.notes = getNotes(notes: notes)
     }
     
-    func getBirdnotes(notes: [String]) -> [BirdNote] {
-        var n:[BirdNote] = []
+    func getNotes(notes: [String]) -> [PentatonNotes] {
+        var n:[PentatonNotes] = []
         
         for note in notes {
-            if let birdNote = BirdNote.getNoteByString(note: note) {
-                n.append(birdNote)
+            if let noteEnum = PentatonNotes.getNoteByString(note: note) {
+                n.append(noteEnum)
             }
         }
         return n

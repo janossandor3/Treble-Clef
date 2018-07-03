@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoadingViewController: UIViewController, CheckUser {
+class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         checkUser()
@@ -24,6 +24,19 @@ class LoadingViewController: UIViewController, CheckUser {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWelcome" {
+            let destinationWelcome = segue.destination as! WelcomeViewController
+            destinationWelcome.delegate = self
+        } else if segue.identifier == "goToMainMenu" {
+            let destinationMainMenu = segue.destination as! MainMenuViewController
+            destinationMainMenu.delegate = self
+        }
+    }
+}
+
+extension LoadingViewController: CheckUser {
+    
     func checkUser() {
         let defaults = UserDefaults()
         let profileId = defaults.string(forKey: DefaulsKeys.PROFILE_ID)
@@ -34,13 +47,4 @@ class LoadingViewController: UIViewController, CheckUser {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToWelcome" {
-            let destinationWelcome = segue.destination as! WelcomeViewController
-            destinationWelcome.delegate = self
-        } else if segue.identifier == "goToMainMenu" {
-            let destinationMainMenu = segue.destination as! MainMenuViewController
-            destinationMainMenu.delegate = self
-        }
-    }
 }

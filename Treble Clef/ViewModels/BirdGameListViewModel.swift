@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class BirdGameListViewModel {
     
+    // igazából ez is kimehetne valami külön helyre ahol a JSON olvasás/írás történne. És itt csak azt használnám
     func getSongsFromJSON() -> [Song] {
         let path = Bundle.main.path(forResource: "songs", ofType: "json")
         let data = NSData(contentsOfFile: path!)

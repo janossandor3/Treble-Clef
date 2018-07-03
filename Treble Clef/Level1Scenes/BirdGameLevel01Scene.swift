@@ -9,16 +9,16 @@
 import SpriteKit
 import Firebase
 
-protocol BirdGameLevel1Protocol {
+protocol BirdGameLevel01Protocol {
     func finishGame(scoreEarned: Int)
 }
 
-class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
+class BirdGameLevel01Scene: SKScene, NodeRemovedProtocol {
     
     private let FINISH_BUTTON = "finish_button"
     private let BACK_BUTTON = "back_button"
     
-    var gameDelegate : BirdGameLevel1Protocol?
+    var gameDelegate : BirdGameLevel01Protocol?
     var song: Song?
     
     let scoreToEarn: Int
@@ -55,9 +55,11 @@ class BirdGameLevel1Scene: SKScene, NodeRemovedProtocol {
     func initBirds() {
         if let selectedSong = song {
             for i in 0...scoreToEarn - 1 {
-                let note: BirdNote = selectedSong.name == "Random" ? BirdNote.getNotes(gameMode: 5)[Int(arc4random_uniform(UInt32(BirdNote.getNotes(gameMode: 5).count)))] : selectedSong.notes[i]
+                let gameMode = 5
+                let game = BirdGameLevel01Properties(gameMode: gameMode)
+                let note: PentatonNotes = selectedSong.name == "Random" ? game.notes[Int(arc4random_uniform(UInt32(gameMode)))] : selectedSong.notes[i]
                 let x = size.width * BirdXCoordinates5Lines.allValues[i].multiplier()
-                let y = size.height * note.yCoordinates5Lines[i]
+                let y = size.height * game.yCoordinates5Lines(note: note)[i]
                 
                 let bird = Bird(frameHeight: self.frame.height, frameWidth: self.frame.width, x: x, birdNote: note)
                 bird.delegate = self
