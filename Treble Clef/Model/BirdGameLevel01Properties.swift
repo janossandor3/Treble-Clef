@@ -12,7 +12,7 @@ import SpriteKit
 // Y coordinates for standard bird game
 class BirdGameLevel01Properties {
     
-    var notes: [PentatonNotes]
+    var notes: [PentatonNote]
     
     init(gameMode: Int) {
         switch gameMode {
@@ -33,7 +33,15 @@ class BirdGameLevel01Properties {
         }
     }
     
-    func yValues5Lines(note: PentatonNotes) -> [CGFloat] {
+}
+
+extension BirdGameLevel01Properties {
+    
+    func yCoordinates5Lines(note: PentatonNote) -> [CGFloat] {
+        return yValues5Lines(note: note).map{$0 / 1000}
+    }
+    
+    private func yValues5Lines(note: PentatonNote) -> [CGFloat] {
         switch note {
         case .doh:
             return [200, 167, 155, 165, 190, 220]
@@ -48,8 +56,12 @@ class BirdGameLevel01Properties {
         }
     }
     
+    func yCoordinates4Lines(note: PentatonNote) -> [CGFloat] {
+        return yValues4Lines(note: note).map{$0 / 1000}
+    }
+    
     // nem jó értékek
-    func yValues4Lines(note: PentatonNotes) -> [CGFloat] {
+    private func yValues4Lines(note: PentatonNote) -> [CGFloat] {
         switch note {
         case .doh:
             return [155, 125, 115, 125, 153, 184]
@@ -62,18 +74,6 @@ class BirdGameLevel01Properties {
         default:
             return [] // és akkor itt most mi? Ugye kimaradt a .re
         }
-    }
-    
-}
-
-extension BirdGameLevel01Properties {
-    
-    func yCoordinates5Lines(note: PentatonNotes) -> [CGFloat] {
-        return yValues5Lines(note: note).map{$0 / 1000}
-    }
-    
-    func yCoordinates4Lines(note: PentatonNotes) -> [CGFloat] {
-        return yValues4Lines(note: note).map{$0 / 1000}
     }
     
 }

@@ -15,12 +15,20 @@ class LoginViewController: UIViewController {
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
+    private var viewModel: LoginViewModel?
     weak var delegate : IdentifyUser?
-    let viewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        viewModel = LoginViewModel(
+                loginSuccessful: { userId in
+                    self.login(userId: userId)
+            },
+                loginError: { error in
+                    self.loginError(error: error)
+            })
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +42,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func LoginButtonClicked(_ sender: Any) {
         SVProgressHUD.show()
-        viewModel.login(email: emailTextfield.text!, password: passwordTextfield.text!)
+        if let vm = viewModel {
+            vm.login(email: emailTextfield.text!, password: passwordTextfield.text!)
+        }
     }
     
     @IBAction func backClicked(_ sender: Any) {
@@ -43,7 +53,7 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController: LoginProtocol {
+extension LoginViewController {
     
     func login(userId: String) {
         SVProgressHUD.dismiss()

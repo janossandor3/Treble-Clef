@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class BirdGameListViewModel {
     
+    // native JSON es codable
+    
     // igazából ez is kimehetne valami külön helyre ahol a JSON olvasás/írás történne. És itt csak azt használnám
     func getSongsFromJSON() -> [Song] {
         let path = Bundle.main.path(forResource: "songs", ofType: "json")

@@ -11,19 +11,23 @@ import SpriteKit
 
 class Bird: SKSpriteNode {
     
+    typealias closureType = () -> Void
+    
     static let initAction = "INIT_ACTION"
     
-    var type: BirdTextures
-    var note: PentatonNotes
-    var xPosition: CGFloat
-    var yHidden: CGFloat
-    weak var delegate: NodeRemovedProtocol?
+    private let type: BirdTextures
+    private let xPosition: CGFloat
+    private let yHidden: CGFloat
+    private let birdClicked: closureType
     
-    init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, birdNote: PentatonNotes) {
+    let note: PentatonNote
+    
+    init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, birdNote: PentatonNote, birdClicked: @escaping closureType) {
         type = BirdTextures.allValues[Int(arc4random_uniform(UInt32(BirdTextures.allValues.count)))]
         note = birdNote
         yHidden = frameHeight + frameHeight / 6
         xPosition = x
+        self.birdClicked = birdClicked
         
         let texture = SKTexture(imageNamed: "birdBlueSitting") // ez itt így nem lesz jó de most mindegy
         super.init(texture: texture, color: UIColor.brown, size: CGSize(width: frameWidth / 6, height: frameHeight / 6))
@@ -72,14 +76,10 @@ class Bird: SKSpriteNode {
         run(SKAction.sequence([flyToInitialPosition, remove]))
     }
     
-    func playNote() {
-        run(SKAction.playSoundFileNamed(note.soundFile, waitForCompletion: false))
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isUserInteractionEnabled = false
-        delegate?.nodeRemoved()
+        birdClicked()
         flyOff()
-//        playNote()
+//        playNote(note)
     }
 }

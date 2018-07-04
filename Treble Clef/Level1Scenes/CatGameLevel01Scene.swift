@@ -9,25 +9,25 @@
 import SpriteKit
 import Firebase
 
-protocol CatGameLevel01Protocol {
-    func finishGame(scoreEarned: Int)
-}
 
 class CatGameLevel01Scene: SKScene {
     
+    typealias closureType = () -> Void
+    
     private let FINISH_BUTTON = "finish_button"
     private let BACK_BUTTON = "back_button"
+    private let CAT_NAME = "cat"
     
-    var gameDelegate : CatGameLevel01Protocol?
-
-    let scoreToEarn: Int
-    var score: Int = 0
-    let game = CatGameLevel01Properties.init()
+    private let scoreToEarn: Int
+    private let game = CatGameLevel01Properties.init()
+    private let finished: closureType
     
-    var chosenNote: PentatonNotes?
+    private var chosenNote: PentatonNote?
+    private var score: Int = 0
     
-    init(size: CGSize, scoreToEarn: Int) {
+    init(size: CGSize, scoreToEarn: Int, finished: @escaping closureType) {
         self.scoreToEarn = scoreToEarn
+        self.finished = finished
         super.init(size: size)
     }
     
@@ -57,13 +57,27 @@ class CatGameLevel01Scene: SKScene {
     }
     
     func initCats() {
-        for note in game.notes {
-            let coordinates = game.catCoordinates(note: note)
-            let direction = game.catDirections(note: note)
-            let cat = Cat(frameHeight: self.frame.height, frameWidth: self.frame.width, x: coordinates.x, y: coordinates.y, note: note, direction: direction)
-            cat.name = "cat"
-            cat.delegate = self
-            addChild(cat)
+        game.notes
+            .map { createCat(coordinates: game.catCoordinates(note: $0), direction: game.catDirections(note: $0), note: $0) }
+            .forEach(addChild)
+    }
+    
+    func createCat(coordinates: (x: CGFloat, y: CGFloat), direction: Direction, note: PentatonNote) -> Cat {
+        return Cat(frameHeight: self.frame.height,
+                   frameWidth: self.frame.width,
+                   x: coordinates.x,
+                   y: coordinates.y,
+                   note: note,
+                   direction: direction,
+                   name: CAT_NAME,
+                   catClicked: { [unowned self] cat in self.catClicked(cat: cat)},
+                   catDone: { [unowned self] () in self.nextNote()})
+    }
+    
+    func catClicked(cat: Cat) {
+        if let currentNote = self.chosenNote, currentNote == cat.note {
+            self.setCatsActive(active: false)
+            cat.goodSelected()
         }
     }
     
@@ -74,13 +88,13 @@ class CatGameLevel01Scene: SKScene {
     
     func chooseNote() {
         let randomNote = game.notes[Int(arc4random_uniform(UInt32(game.notes.count)))]
+        guard let prev = chosenNote else {
+            chosenNote = randomNote
+            return
+        }
         
-        if let prev = chosenNote {
-            if prev == randomNote {
-                chooseNote()
-            } else {
-                chosenNote = randomNote
-            }
+        if prev == randomNote {
+            chooseNote()
         } else {
             chosenNote = randomNote
         }
@@ -96,7 +110,7 @@ class CatGameLevel01Scene: SKScene {
     
     func setCatsActive(active: Bool) {
         for node in children {
-            if node.name == "cat" {
+            if node.name == CAT_NAME {
                 let cat = node as! Cat
                 cat.isUserInteractionEnabled = active
             }
@@ -104,53 +118,17 @@ class CatGameLevel01Scene: SKScene {
     }
     
     func finishGame() {
-//        let fadedBackground = SKSpriteNode()
-//        fadedBackground.color = UIColor.black
-//        fadedBackground.alpha = 0.1
-//        fadedBackground.zPosition = 20
-//        fadedBackground.size = CGSize(width: self.frame.width, height: self.frame.height)
-//        fadedBackground.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
-//        addChild(fadedBackground)
-//        fadedBackground.run(SKAction.fadeAlpha(to: 0.3, duration: 1))
-//
-//        let finishButton = SKSpriteNode(imageNamed: "birdGame5")
-//        finishButton.name = FINISH_BUTTON
-//        finishButton.alpha = 0
-//        finishButton.zPosition = 20
-//        finishButton.size = CGSize(width: self.frame.width / 2, height: self.frame.height / 2)
-//        finishButton.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
-//        addChild(finishButton)
-//        finishButton.run(SKAction.fadeIn(withDuration: 1))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
             let touchedNode = self.atPoint(location)
-            if let name = touchedNode.name {
-                if name == BACK_BUTTON || name == FINISH_BUTTON {
-                    gameDelegate?.finishGame(scoreEarned: score)
-                }
+            if let name = touchedNode.name, name == BACK_BUTTON || name == FINISH_BUTTON {
+                finished()
             }
 
         }
-    }
-    
-}
-
-extension CatGameLevel01Scene: CatTouchedProtocol {
-    
-    func catTouched(cat: Cat) {
-        if let currentNote = chosenNote {
-            if currentNote == cat.note {
-                setCatsActive(active: false)
-                cat.goodSelected()
-            }
-        }
-    }
-    
-    func catDone() {
-        nextNote()
     }
     
 }

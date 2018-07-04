@@ -12,7 +12,7 @@ class Song {
     
     let name: String
     let keynote: String
-    var notes: [PentatonNotes] = []
+    var notes: [PentatonNote] = []
     
     init(name: String, notes: [String], keynote: String) {
         self.name = name // és ha nincs? ezeket majd lekezelem
@@ -20,11 +20,11 @@ class Song {
         self.notes = getNotes(notes: notes)
     }
     
-    func getNotes(notes: [String]) -> [PentatonNotes] {
-        var n:[PentatonNotes] = []
+    func getNotes(notes: [String]) -> [PentatonNote] {
+        var n:[PentatonNote] = []
         
         for note in notes {
-            if let noteEnum = PentatonNotes.getNoteByString(note: note) {
+            if let noteEnum = PentatonNote.getNoteByString(note: note) {
                 n.append(noteEnum)
             }
         }

@@ -15,8 +15,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
+    private let viewModel = RegisterViewModel()
     weak var delegate : IdentifyUser?
-    let viewModel = RegisterViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

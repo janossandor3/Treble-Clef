@@ -14,9 +14,9 @@
 		08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1420E26A33002068C4 /* birdYellow.atlas */; };
 		08341C1820E26A33002068C4 /* birdBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1520E26A33002068C4 /* birdBlue.atlas */; };
 		08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1A20E288B2002068C4 /* LoadingViewController.swift */; };
+		083E13CF20ECDE1F00981B1D /* CheckUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E13CE20ECDE1F00981B1D /* CheckUser.swift */; };
 		084797C520EB6FDC0094E4B1 /* CatTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C420EB6FDC0094E4B1 /* CatTextures.swift */; };
-		084797C720EB7D1E0094E4B1 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C620EB7D1E0094E4B1 /* SKNode.swift */; };
-		084797CA20EB86E30094E4B1 /* CatTouchedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C920EB86E30094E4B1 /* CatTouchedProtocol.swift */; };
+		084797C720EB7D1E0094E4B1 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C620EB7D1E0094E4B1 /* SKSpriteNode.swift */; };
 		084797CC20EBA8E40094E4B1 /* walkingCatRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 084797CB20EBA8E30094E4B1 /* walkingCatRight.atlas */; };
 		084797CE20EBA9130094E4B1 /* walkingCatLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 084797CD20EBA9130094E4B1 /* walkingCatLeft.atlas */; };
 		084797D020EBAC6D0094E4B1 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797CF20EBAC6D0094E4B1 /* Direction.swift */; };
@@ -33,7 +33,6 @@
 		0870ED0520E4FEF9001CEB22 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */; };
 		0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0720E50561001CEB22 /* FirebaseService.swift */; };
 		0870ED0B20E505B5001CEB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0A20E505B5001CEB22 /* User.swift */; };
-		0870ED0E20E51360001CEB22 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0D20E51360001CEB22 /* LoginProtocol.swift */; };
 		0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */; };
 		0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */; };
 		0870ED1420E51E61001CEB22 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1320E51E61001CEB22 /* String.swift */; };
@@ -44,15 +43,12 @@
 		089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826A20D93639006A2DCB /* RegisterViewController.swift */; };
 		089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826C20D952E4006A2DCB /* IdentifyUser.swift */; };
 		089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826E20D95591006A2DCB /* DefaultsKeys.swift */; };
-		08AE09F720E37FBF00DB74C5 /* CheckUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09F620E37FBF00DB74C5 /* CheckUser.swift */; };
-		08AE09F920E3805B00DB74C5 /* LogoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */; };
 		08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09FA20E38FBA00DB74C5 /* Bird.swift */; };
 		08AE0A0220E3BC7F00DB74C5 /* mi.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE09FD20E3BC7E00DB74C5 /* mi.wav */; };
 		08AE0A0320E3BC7F00DB74C5 /* do.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE09FE20E3BC7E00DB74C5 /* do.wav */; };
 		08AE0A0420E3BC7F00DB74C5 /* re.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE09FF20E3BC7E00DB74C5 /* re.wav */; };
 		08AE0A0520E3BC7F00DB74C5 /* la.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE0A0020E3BC7E00DB74C5 /* la.wav */; };
 		08AE0A0620E3BC7F00DB74C5 /* sol.wav in Resources */ = {isa = PBXBuildFile; fileRef = 08AE0A0120E3BC7F00DB74C5 /* sol.wav */; };
-		08AE0A0820E3C8DC00DB74C5 /* NodeRemovedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */; };
 		08BD41ED20E0FAB4005EC831 /* Level01MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */; };
 		08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */; };
 		08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */; };
@@ -63,7 +59,7 @@
 		08F01BCF20EA883D00842554 /* GameCatLevel01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BCE20EA883D00842554 /* GameCatLevel01ViewController.swift */; };
 		08F01BD120EA88CF00842554 /* CatGameLevel01Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD020EA88CF00842554 /* CatGameLevel01Scene.swift */; };
 		08F01BD320EA89BF00842554 /* CatGameLevel01Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD220EA89BF00842554 /* CatGameLevel01Properties.swift */; };
-		08F01BD520EA89DC00842554 /* PentatonNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD420EA89DC00842554 /* PentatonNotes.swift */; };
+		08F01BD520EA89DC00842554 /* PentatonNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD420EA89DC00842554 /* PentatonNote.swift */; };
 		08F01BD720EA8E9700842554 /* CoordinateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD620EA8E9700842554 /* CoordinateConverter.swift */; };
 		9F91111B5132BEB7DDA2C320 /* Pods_Treble_Clef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */; };
 /* End PBXBuildFile section */
@@ -76,9 +72,9 @@
 		08341C1420E26A33002068C4 /* birdYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdYellow.atlas; sourceTree = "<group>"; };
 		08341C1520E26A33002068C4 /* birdBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdBlue.atlas; sourceTree = "<group>"; };
 		08341C1A20E288B2002068C4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		083E13CE20ECDE1F00981B1D /* CheckUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUser.swift; sourceTree = "<group>"; };
 		084797C420EB6FDC0094E4B1 /* CatTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTextures.swift; sourceTree = "<group>"; };
-		084797C620EB7D1E0094E4B1 /* SKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
-		084797C920EB86E30094E4B1 /* CatTouchedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTouchedProtocol.swift; sourceTree = "<group>"; };
+		084797C620EB7D1E0094E4B1 /* SKSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
 		084797CB20EBA8E30094E4B1 /* walkingCatRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingCatRight.atlas; sourceTree = "<group>"; };
 		084797CD20EBA9130094E4B1 /* walkingCatLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingCatLeft.atlas; sourceTree = "<group>"; };
 		084797CF20EBAC6D0094E4B1 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -97,7 +93,6 @@
 		0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0870ED0720E50561001CEB22 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0870ED0A20E505B5001CEB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0870ED0D20E51360001CEB22 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		0870ED1320E51E61001CEB22 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -108,15 +103,12 @@
 		089C826A20D93639006A2DCB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		089C826C20D952E4006A2DCB /* IdentifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyUser.swift; sourceTree = "<group>"; };
 		089C826E20D95591006A2DCB /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
-		08AE09F620E37FBF00DB74C5 /* CheckUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUser.swift; sourceTree = "<group>"; };
-		08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutProtocol.swift; sourceTree = "<group>"; };
 		08AE09FA20E38FBA00DB74C5 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		08AE09FD20E3BC7E00DB74C5 /* mi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mi.wav; sourceTree = "<group>"; };
 		08AE09FE20E3BC7E00DB74C5 /* do.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = do.wav; sourceTree = "<group>"; };
 		08AE09FF20E3BC7E00DB74C5 /* re.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = re.wav; sourceTree = "<group>"; };
 		08AE0A0020E3BC7E00DB74C5 /* la.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = la.wav; sourceTree = "<group>"; };
 		08AE0A0120E3BC7F00DB74C5 /* sol.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sol.wav; sourceTree = "<group>"; };
-		08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRemovedProtocol.swift; sourceTree = "<group>"; };
 		08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level01MenuViewController.swift; sourceTree = "<group>"; };
 		08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level02MenuViewContoller.swift; sourceTree = "<group>"; };
 		08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level03MenuViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +119,7 @@
 		08F01BCE20EA883D00842554 /* GameCatLevel01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatLevel01ViewController.swift; sourceTree = "<group>"; };
 		08F01BD020EA88CF00842554 /* CatGameLevel01Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGameLevel01Scene.swift; sourceTree = "<group>"; };
 		08F01BD220EA89BF00842554 /* CatGameLevel01Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGameLevel01Properties.swift; sourceTree = "<group>"; };
-		08F01BD420EA89DC00842554 /* PentatonNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentatonNotes.swift; sourceTree = "<group>"; };
+		08F01BD420EA89DC00842554 /* PentatonNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentatonNote.swift; sourceTree = "<group>"; };
 		08F01BD620EA8E9700842554 /* CoordinateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateConverter.swift; sourceTree = "<group>"; };
 		0DC08BDC5CA0D3C004568D8A /* Pods-Treble Clef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.release.xcconfig"; sourceTree = "<group>"; };
 		2B6C27C27E4D9EBF1CC6DB7A /* Pods-Treble Clef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +154,7 @@
 		084797C820EB80F30094E4B1 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				08F01BD420EA89DC00842554 /* PentatonNotes.swift */,
+				08F01BD420EA89DC00842554 /* PentatonNote.swift */,
 				08341C1120E26259002068C4 /* BirdTextures.swift */,
 				084797C420EB6FDC0094E4B1 /* CatTextures.swift */,
 				084797CF20EBAC6D0094E4B1 /* Direction.swift */,
@@ -269,8 +261,7 @@
 				0870ED1320E51E61001CEB22 /* String.swift */,
 				0870ED1520E525B2001CEB22 /* UIViewContoller.swift */,
 				084903A920E642FD008A14DB /* ClosedRange.swift */,
-				084797C620EB7D1E0094E4B1 /* SKNode.swift */,
-				08341C0D20E22BC5002068C4 /* EnumCollection.swift */,
+				084797C620EB7D1E0094E4B1 /* SKSpriteNode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,13 +288,10 @@
 			isa = PBXGroup;
 			children = (
 				089C826C20D952E4006A2DCB /* IdentifyUser.swift */,
-				08AE09F820E3805B00DB74C5 /* LogoutProtocol.swift */,
-				0870ED0D20E51360001CEB22 /* LoginProtocol.swift */,
 				0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */,
-				08AE0A0720E3C8DC00DB74C5 /* NodeRemovedProtocol.swift */,
-				084797C920EB86E30094E4B1 /* CatTouchedProtocol.swift */,
-				08AE09F620E37FBF00DB74C5 /* CheckUser.swift */,
+				083E13CE20ECDE1F00981B1D /* CheckUser.swift */,
 				08F01BD620EA8E9700842554 /* CoordinateConverter.swift */,
+				08341C0D20E22BC5002068C4 /* EnumCollection.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -501,11 +489,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08AE09F920E3805B00DB74C5 /* LogoutProtocol.swift in Sources */,
 				0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */,
 				08F01BCF20EA883D00842554 /* GameCatLevel01ViewController.swift in Sources */,
 				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
 				0870ED0520E4FEF9001CEB22 /* LoginViewModel.swift in Sources */,
+				083E13CF20ECDE1F00981B1D /* CheckUser.swift in Sources */,
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
 				08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */,
 				08F01BD320EA89BF00842554 /* CatGameLevel01Properties.swift in Sources */,
@@ -514,20 +502,16 @@
 				08BD41F820E12246005EC831 /* BirdGameLevel01Scene.swift in Sources */,
 				084903A020E61A86008A14DB /* BirdGameListViewModel.swift in Sources */,
 				08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */,
-				08AE09F720E37FBF00DB74C5 /* CheckUser.swift in Sources */,
 				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
 				08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */,
-				08F01BD520EA89DC00842554 /* PentatonNotes.swift in Sources */,
-				0870ED0E20E51360001CEB22 /* LoginProtocol.swift in Sources */,
+				08F01BD520EA89DC00842554 /* PentatonNote.swift in Sources */,
 				08F01BD120EA88CF00842554 /* CatGameLevel01Scene.swift in Sources */,
 				08341C1020E232D6002068C4 /* BirdGameLevel01Properties.swift in Sources */,
-				08AE0A0820E3C8DC00DB74C5 /* NodeRemovedProtocol.swift in Sources */,
 				089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */,
-				084797CA20EB86E30094E4B1 /* CatTouchedProtocol.swift in Sources */,
 				0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */,
 				0870ED1620E525B2001CEB22 /* UIViewContoller.swift in Sources */,
 				084797C520EB6FDC0094E4B1 /* CatTextures.swift in Sources */,
-				084797C720EB7D1E0094E4B1 /* SKNode.swift in Sources */,
+				084797C720EB7D1E0094E4B1 /* SKSpriteNode.swift in Sources */,
 				08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */,
 				0870ED1420E51E61001CEB22 /* String.swift in Sources */,
 				084797D020EBAC6D0094E4B1 /* Direction.swift in Sources */,

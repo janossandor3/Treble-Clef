@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainMenuViewController: UIViewController, LogoutProtocol {
+class MainMenuViewController: UIViewController {
 
     weak var delegate : CheckUser?
     
@@ -26,16 +26,18 @@ class MainMenuViewController: UIViewController, LogoutProtocol {
         // Dispose of any resources that can be recreated.
     }
     
-    func logout() {
-        navigationController?.popToRootViewController(animated: true)
-        delegate?.checkUser()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSettings" {
             let destinationSettings = segue.destination as! SettingsViewController
-            destinationSettings.delegate = self
+            destinationSettings.logoutClicked = { [unowned self] in
+                self.logout()
+            }
         }
+    }
+    
+    func logout() {
+        navigationController?.popToRootViewController(animated: true)
+        delegate?.checkUser()
     }
     
 }

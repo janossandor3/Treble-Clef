@@ -10,8 +10,8 @@ import UIKit
 
 class BirdGameListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var selectedSong: Song?
-    let viewModel = BirdGameListViewModel()
+    private let viewModel = BirdGameListViewModel()
+    private var selectedSong: Song?
     
     @IBOutlet weak var tableView: UITableView!
     

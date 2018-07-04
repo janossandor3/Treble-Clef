@@ -13,23 +13,31 @@ class Cat: SKSpriteNode {
     
     static let initAction = "INIT_ACTION"
     
-    var type: CatTextures
-    var note: PentatonNotes
-    var xPosition: CGFloat
-    var yPosition: CGFloat
-    var direction: Direction
-    weak var delegate: CatTouchedProtocol?
+    private let type: CatTextures
+    private let xPosition: CGFloat
+    private let yPosition: CGFloat
+    private let direction: Direction
     
-    init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, y: CGFloat, note: PentatonNotes, direction: Direction) {
+    private let catClicked: (Cat) -> Void
+    private let catDone: () -> Void
+    
+    let note: PentatonNote
+    
+    init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, y: CGFloat, note: PentatonNote, direction: Direction, name: String, catClicked: @escaping (Cat) -> Void, catDone: @escaping () -> Void) {
         type = CatTextures.allValues[Int(arc4random_uniform(UInt32(CatTextures.allValues.count)))]
         self.note = note
         self.direction = direction
+        self.catClicked = catClicked
+        self.catDone = catDone
+        
         xPosition = x
         yPosition = y
         
+        // ez az skspritenode saját init-jéhez kell
         let texture = SKTexture(imageNamed: "sittingCat") // ez itt így nem lesz jó de most mindegy
         super.init(texture: texture, color: UIColor.brown, size: CGSize(width: frameWidth / 5.8, height: frameHeight / 4.8))
         
+        self.name = name
         zPosition = 10 // ennek utána kell járni majd
         position = CGPoint(x: xPosition, y: yPosition)
         
@@ -43,9 +51,9 @@ class Cat: SKSpriteNode {
     }
     
     func goodSelected() {
-        let playNote = SKAction.playSoundFileNamed(note.soundFile, waitForCompletion: false)
-        run(SKAction.group([playNote, animate()])) { [unowned self] () -> Void in
-            self.delegate?.catDone()
+//        playNote(note)
+        run(animate()) { [unowned self] () -> Void in
+            self.catDone()
         }
     }
     
@@ -61,6 +69,10 @@ class Cat: SKSpriteNode {
         return SKAction.sequence([goSequence, changeTextureBack])
     }
     
+    func playNote() {
+        run(SKAction.playSoundFileNamed(note.soundFile, waitForCompletion: false))
+    }
+    
     func walkAnimation(direction: Direction) -> SKAction {
         var catAnimation: [SKTexture] = []
         for textureName in type.getWalkAnimationTextures(direction: direction).textureNames {
@@ -72,6 +84,6 @@ class Cat: SKSpriteNode {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.catTouched(cat: self)
+        catClicked(self)
     }
 }

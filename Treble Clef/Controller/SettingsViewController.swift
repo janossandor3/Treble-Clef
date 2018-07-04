@@ -14,8 +14,9 @@ import SVProgressHUD
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var userLevel: UILabel!
-    weak var delegate: LogoutProtocol?
-    let fir = FirebaseService()
+
+    private let fir = FirebaseService()
+    var logoutClicked: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,9 @@ class SettingsViewController: UIViewController {
         SVProgressHUD.show()
         if fir.logout() {
             dismiss(animated: false, completion: nil)
-            delegate?.logout()
+            if let logout = logoutClicked {
+                logout()
+            }
             SVProgressHUD.dismiss()
         } else {
             SVProgressHUD.dismiss()

@@ -7,25 +7,22 @@
 //
 
 import SpriteKit
-import Firebase
 
-protocol BirdGameLevel01Protocol {
-    func finishGame(scoreEarned: Int)
-}
-
-class BirdGameLevel01Scene: SKScene, NodeRemovedProtocol {
+class BirdGameLevel01Scene: SKScene {
+    
+    typealias closureType = (Int) -> Void
     
     private let FINISH_BUTTON = "finish_button"
     private let BACK_BUTTON = "back_button"
+    private let song: Song?
+    private let scoreToEarn: Int
+    private var score: Int = 0
+    private let finished: closureType
     
-    var gameDelegate : BirdGameLevel01Protocol?
-    var song: Song?
-    
-    let scoreToEarn: Int
-    var score: Int = 0
-    
-    init(size: CGSize, scoreToEarn: Int) {
+    init(size: CGSize, scoreToEarn: Int, song: Song?, finished: @escaping closureType) {
+        self.song = song
         self.scoreToEarn = scoreToEarn
+        self.finished = finished
         super.init(size: size)
     }
     
@@ -57,12 +54,13 @@ class BirdGameLevel01Scene: SKScene, NodeRemovedProtocol {
             for i in 0...scoreToEarn - 1 {
                 let gameMode = 5
                 let game = BirdGameLevel01Properties(gameMode: gameMode)
-                let note: PentatonNotes = selectedSong.name == "Random" ? game.notes[Int(arc4random_uniform(UInt32(gameMode)))] : selectedSong.notes[i]
+                let note: PentatonNote = selectedSong.name == "Random" ? game.notes[Int(arc4random_uniform(UInt32(gameMode)))] : selectedSong.notes[i]
                 let x = size.width * BirdXCoordinates5Lines.allValues[i].multiplier()
                 let y = size.height * game.yCoordinates5Lines(note: note)[i]
                 
-                let bird = Bird(frameHeight: self.frame.height, frameWidth: self.frame.width, x: x, birdNote: note)
-                bird.delegate = self
+                let bird = Bird(frameHeight: self.frame.height, frameWidth: self.frame.width, x: x, birdNote: note) { [unowned self] in
+                    self.nodeRemoved()
+                }
                 addChild(bird)
                 bird.flyDown(x: x, y: y)
             }
@@ -97,16 +95,15 @@ class BirdGameLevel01Scene: SKScene, NodeRemovedProtocol {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         for touch in touches {
             let location = touch.location(in: self)
             let touchedNode = self.atPoint(location)
-            if let name = touchedNode.name {
-                if name == BACK_BUTTON || name == FINISH_BUTTON {
-                    gameDelegate?.finishGame(scoreEarned: score)
-                }
+            if let name = touchedNode.name, name == BACK_BUTTON || name == FINISH_BUTTON {
+                finished(score)
             }
-            
         }
+        
     }
 
 }

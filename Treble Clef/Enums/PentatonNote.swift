@@ -1,5 +1,5 @@
 //
-//  PentatonNotes.swift
+//  PentatonNote.swift
 //  Treble Clef
 //
 //  Created by iMind on 2018. 07. 02..
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PentatonNotes: EnumCollection {
+enum PentatonNote: EnumCollection {
     case doh, re, mi, sol, la
     
     var soundFile: String {
@@ -26,13 +26,13 @@ enum PentatonNotes: EnumCollection {
         }
     }
     
-    static var noteDict: [String: PentatonNotes] = ["doh": .doh,
+    static var noteDict: [String: PentatonNote] = ["doh": .doh,
                                                     "re": .re,
                                                     "mi": .mi,
                                                     "sol": .sol,
                                                     "la": .la];
     
-    static func getNoteByString(note: String) -> PentatonNotes? {
+    static func getNoteByString(note: String) -> PentatonNote? {
         guard let type = noteDict[note] else {
             return nil
         }
