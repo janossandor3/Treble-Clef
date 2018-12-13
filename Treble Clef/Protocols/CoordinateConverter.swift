@@ -2,7 +2,7 @@
 //  asd.swift
 //  Treble Clef
 //
-//  Created by iMind on 2018. 07. 02..
+//  Created on 2018. 07. 02..
 //  Copyright © 2018. Janos Sandor. All rights reserved.
 //
 

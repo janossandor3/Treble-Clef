@@ -1,13 +1,9 @@
 //
-//  Direction.swift
+//  Game.swift
 //  Treble Clef
 //
-//  Created on 2018. 07. 03..
+//  Created on 2018. 12. 13..
 //  Copyright © 2018. Janos Sandor. All rights reserved.
 //
 
 import Foundation
-
-enum Direction {
-    case right, left
-}

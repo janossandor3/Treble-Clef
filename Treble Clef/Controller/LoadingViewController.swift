@@ -2,7 +2,7 @@
 //  LoadingViewController.swift
 //  Treble Clef
 //
-//  Created by iMind on 2018. 06. 26..
+//  Created on 2018. 06. 26..
 //  Copyright © 2018. Janos Sandor. All rights reserved.
 //
 
