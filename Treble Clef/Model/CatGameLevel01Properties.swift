@@ -13,7 +13,7 @@ class CatGameLevel01Properties {
     
     // these could be read from json
     let scoreToEarn = 5
-    let notes = PentatonNote.allValues
+    let notes = PentatonNote.allCases
     
     func catCoordinates(note: PentatonNote) -> (x: CGFloat, y: CGFloat) {
         switch note {

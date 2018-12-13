@@ -55,7 +55,8 @@ class BirdGameLevel01Scene: SKScene {
                 let gameMode = 5
                 let game = BirdGameLevel01Properties(gameMode: gameMode)
                 let note: PentatonNote = selectedSong.name == "Random" ? game.notes[Int(arc4random_uniform(UInt32(gameMode)))] : selectedSong.notes[i]
-                let x = size.width * BirdXCoordinates5Lines.allValues[i].multiplier()
+                
+                let x = size.width * BirdXCoordinates5Lines.allCases[i].multiplier()
                 let y = size.height * game.yCoordinates5Lines(note: note)[i]
                 
                 let bird = Bird(frameHeight: self.frame.height, frameWidth: self.frame.width, x: x, birdNote: note) { [unowned self] in

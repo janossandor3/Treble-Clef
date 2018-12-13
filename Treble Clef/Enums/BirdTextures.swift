@@ -9,21 +9,14 @@
 import Foundation
 import SpriteKit
 
-enum BirdTextures: String, EnumCollection {
+enum BirdTextures: String, CaseIterable {
 
-    case birdBlue = "birdBlueSitting"
-    case birdYellow = "birdYellowSitting"
-    case birdRed = "birdRedSitting"
+    case birdBlue
+    case birdYellow
+    case birdRed
     
     var getFlyAnimationTextures: SKTextureAtlas {
-        switch self {
-        case .birdBlue:
-            return SKTextureAtlas(named: "birdBlue")
-        case .birdYellow:
-            return SKTextureAtlas(named: "birdYellow")
-        case .birdRed:
-            return SKTextureAtlas(named: "birdRed")
-        }
+        return SKTextureAtlas(named: self.rawValue)
     }
     
 }

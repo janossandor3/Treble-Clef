@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0D20E22BC5002068C4 /* EnumCollection.swift */; };
 		08341C1020E232D6002068C4 /* BirdGameLevel01Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0F20E232D6002068C4 /* BirdGameLevel01Properties.swift */; };
 		08341C1220E26259002068C4 /* BirdTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1120E26259002068C4 /* BirdTextures.swift */; };
 		08341C1620E26A33002068C4 /* birdRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1320E26A33002068C4 /* birdRed.atlas */; };
@@ -16,14 +15,14 @@
 		08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1A20E288B2002068C4 /* LoadingViewController.swift */; };
 		083E13CF20ECDE1F00981B1D /* CheckUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E13CE20ECDE1F00981B1D /* CheckUser.swift */; };
 		084797C520EB6FDC0094E4B1 /* CatTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C420EB6FDC0094E4B1 /* CatTextures.swift */; };
-		084797C720EB7D1E0094E4B1 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C620EB7D1E0094E4B1 /* SKSpriteNode.swift */; };
+		084797C720EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797C620EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift */; };
 		084797CC20EBA8E40094E4B1 /* walkingCatRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 084797CB20EBA8E30094E4B1 /* walkingCatRight.atlas */; };
 		084797CE20EBA9130094E4B1 /* walkingCatLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 084797CD20EBA9130094E4B1 /* walkingCatLeft.atlas */; };
 		084797D020EBAC6D0094E4B1 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797CF20EBAC6D0094E4B1 /* Direction.swift */; };
 		084903A020E61A86008A14DB /* BirdGameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0849039F20E61A86008A14DB /* BirdGameListViewModel.swift */; };
 		084903A420E61C46008A14DB /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 084903A320E61C46008A14DB /* songs.json */; };
 		084903A620E61C86008A14DB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084903A520E61C86008A14DB /* Song.swift */; };
-		084903AA20E642FD008A14DB /* ClosedRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084903A920E642FD008A14DB /* ClosedRange.swift */; };
+		084903AA20E642FD008A14DB /* ClosedRange+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084903A920E642FD008A14DB /* ClosedRange+Extensions.swift */; };
 		084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D620D92A9A0041B13A /* AppDelegate.swift */; };
 		084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D820D92A9A0041B13A /* MainMenuViewController.swift */; };
 		084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084E10DA20D92A9A0041B13A /* Main.storyboard */; };
@@ -35,8 +34,8 @@
 		0870ED0B20E505B5001CEB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0A20E505B5001CEB22 /* User.swift */; };
 		0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */; };
 		0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */; };
-		0870ED1420E51E61001CEB22 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1320E51E61001CEB22 /* String.swift */; };
-		0870ED1620E525B2001CEB22 /* UIViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1520E525B2001CEB22 /* UIViewContoller.swift */; };
+		0870ED1420E51E61001CEB22 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1320E51E61001CEB22 /* String+Extensions.swift */; };
+		0870ED1620E525B2001CEB22 /* UIViewContoller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1520E525B2001CEB22 /* UIViewContoller+Extensions.swift */; };
 		0870ED1820E52692001CEB22 /* BirdGameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1720E52692001CEB22 /* BirdGameListViewController.swift */; };
 		089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826620D93534006A2DCB /* WelcomeViewController.swift */; };
 		089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826820D9356D006A2DCB /* LoginViewController.swift */; };
@@ -65,7 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08341C0D20E22BC5002068C4 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		08341C0F20E232D6002068C4 /* BirdGameLevel01Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameLevel01Properties.swift; sourceTree = "<group>"; };
 		08341C1120E26259002068C4 /* BirdTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTextures.swift; sourceTree = "<group>"; };
 		08341C1320E26A33002068C4 /* birdRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdRed.atlas; sourceTree = "<group>"; };
@@ -74,14 +72,14 @@
 		08341C1A20E288B2002068C4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		083E13CE20ECDE1F00981B1D /* CheckUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUser.swift; sourceTree = "<group>"; };
 		084797C420EB6FDC0094E4B1 /* CatTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTextures.swift; sourceTree = "<group>"; };
-		084797C620EB7D1E0094E4B1 /* SKSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
+		084797C620EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extensions.swift"; sourceTree = "<group>"; };
 		084797CB20EBA8E30094E4B1 /* walkingCatRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingCatRight.atlas; sourceTree = "<group>"; };
 		084797CD20EBA9130094E4B1 /* walkingCatLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingCatLeft.atlas; sourceTree = "<group>"; };
 		084797CF20EBAC6D0094E4B1 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		0849039F20E61A86008A14DB /* BirdGameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameListViewModel.swift; sourceTree = "<group>"; };
 		084903A320E61C46008A14DB /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		084903A520E61C86008A14DB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		084903A920E642FD008A14DB /* ClosedRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedRange.swift; sourceTree = "<group>"; };
+		084903A920E642FD008A14DB /* ClosedRange+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Extensions.swift"; sourceTree = "<group>"; };
 		084E10D320D92A9A0041B13A /* Treble Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treble Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		084E10D620D92A9A0041B13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		084E10D820D92A9A0041B13A /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -95,8 +93,8 @@
 		0870ED0A20E505B5001CEB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		0870ED1320E51E61001CEB22 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		0870ED1520E525B2001CEB22 /* UIViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewContoller.swift; sourceTree = "<group>"; };
+		0870ED1320E51E61001CEB22 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0870ED1520E525B2001CEB22 /* UIViewContoller+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Extensions.swift"; sourceTree = "<group>"; };
 		0870ED1720E52692001CEB22 /* BirdGameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameListViewController.swift; sourceTree = "<group>"; };
 		089C826620D93534006A2DCB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		089C826820D9356D006A2DCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -258,10 +256,10 @@
 		0870ED0220E4FED7001CEB22 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0870ED1320E51E61001CEB22 /* String.swift */,
-				0870ED1520E525B2001CEB22 /* UIViewContoller.swift */,
-				084903A920E642FD008A14DB /* ClosedRange.swift */,
-				084797C620EB7D1E0094E4B1 /* SKSpriteNode.swift */,
+				0870ED1320E51E61001CEB22 /* String+Extensions.swift */,
+				0870ED1520E525B2001CEB22 /* UIViewContoller+Extensions.swift */,
+				084903A920E642FD008A14DB /* ClosedRange+Extensions.swift */,
+				084797C620EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,7 +289,6 @@
 				0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */,
 				083E13CE20ECDE1F00981B1D /* CheckUser.swift */,
 				08F01BD620EA8E9700842554 /* CoordinateConverter.swift */,
-				08341C0D20E22BC5002068C4 /* EnumCollection.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -498,23 +495,22 @@
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
 				08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */,
 				08F01BD320EA89BF00842554 /* CatGameLevel01Properties.swift in Sources */,
-				084903AA20E642FD008A14DB /* ClosedRange.swift in Sources */,
+				084903AA20E642FD008A14DB /* ClosedRange+Extensions.swift in Sources */,
 				08341C1220E26259002068C4 /* BirdTextures.swift in Sources */,
 				08BD41F820E12246005EC831 /* BirdGameLevel01Scene.swift in Sources */,
 				084903A020E61A86008A14DB /* BirdGameListViewModel.swift in Sources */,
 				08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */,
 				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
-				08341C0E20E22BC5002068C4 /* EnumCollection.swift in Sources */,
 				08F01BD520EA89DC00842554 /* PentatonNote.swift in Sources */,
 				08F01BD120EA88CF00842554 /* CatGameLevel01Scene.swift in Sources */,
 				08341C1020E232D6002068C4 /* BirdGameLevel01Properties.swift in Sources */,
 				089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */,
 				0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */,
-				0870ED1620E525B2001CEB22 /* UIViewContoller.swift in Sources */,
+				0870ED1620E525B2001CEB22 /* UIViewContoller+Extensions.swift in Sources */,
 				084797C520EB6FDC0094E4B1 /* CatTextures.swift in Sources */,
-				084797C720EB7D1E0094E4B1 /* SKSpriteNode.swift in Sources */,
+				084797C720EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift in Sources */,
 				08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */,
-				0870ED1420E51E61001CEB22 /* String.swift in Sources */,
+				0870ED1420E51E61001CEB22 /* String+Extensions.swift in Sources */,
 				084797D020EBAC6D0094E4B1 /* Direction.swift in Sources */,
 				0870ED1820E52692001CEB22 /* BirdGameListViewController.swift in Sources */,
 				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,

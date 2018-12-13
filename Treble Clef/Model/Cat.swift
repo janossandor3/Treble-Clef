@@ -24,7 +24,7 @@ class Cat: SKSpriteNode {
     let note: PentatonNote
     
     init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, y: CGFloat, note: PentatonNote, direction: Direction, name: String, catClicked: @escaping (Cat) -> Void, catDone: @escaping () -> Void) {
-        type = CatTextures.allValues[Int(arc4random_uniform(UInt32(CatTextures.allValues.count)))]
+        type = CatTextures.allCases[Int(arc4random_uniform(UInt32(CatTextures.allCases.count)))]
         self.note = note
         self.direction = direction
         self.catClicked = catClicked

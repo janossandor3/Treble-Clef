@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PentatonNote: EnumCollection {
+enum PentatonNote: CaseIterable {
     case doh, re, mi, sol, la
     
     var soundFile: String {

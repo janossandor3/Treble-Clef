@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-enum CatTextures: String, EnumCollection {
+enum CatTextures: String, CaseIterable {
     
     case cat = "sittingCat"
     

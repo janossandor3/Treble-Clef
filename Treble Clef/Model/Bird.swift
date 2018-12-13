@@ -23,7 +23,7 @@ class Bird: SKSpriteNode {
     let note: PentatonNote
     
     init(frameHeight: CGFloat, frameWidth: CGFloat, x: CGFloat, birdNote: PentatonNote, birdClicked: @escaping closureType) {
-        type = BirdTextures.allValues[Int(arc4random_uniform(UInt32(BirdTextures.allValues.count)))]
+        type = BirdTextures.allCases[Int(arc4random_uniform(UInt32(BirdTextures.allCases.count)))]
         note = birdNote
         yHidden = frameHeight + frameHeight / 6
         xPosition = x

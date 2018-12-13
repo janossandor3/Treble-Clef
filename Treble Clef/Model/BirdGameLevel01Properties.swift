@@ -79,7 +79,7 @@ extension BirdGameLevel01Properties {
 }
 
 // X coordinates for 5 lines standard game
-enum BirdXCoordinates5Lines: CGFloat, EnumCollection, CoordinateConverter {
+enum BirdXCoordinates5Lines: CGFloat, CaseIterable, CoordinateConverter {
     case note1 = 175
     case note2 = 312
     case note3 = 450
