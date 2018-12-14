@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Game {
+    var ID: String
+    var song: Song?
+    var kind: Kind
+    var score: Int64
+}
