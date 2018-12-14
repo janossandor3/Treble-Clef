@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08341C1020E232D6002068C4 /* BirdGameLevel01Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0F20E232D6002068C4 /* BirdGameLevel01Properties.swift */; };
+		08341C1020E232D6002068C4 /* BirdLevel1Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C0F20E232D6002068C4 /* BirdLevel1Game.swift */; };
 		08341C1220E26259002068C4 /* BirdTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08341C1120E26259002068C4 /* BirdTextures.swift */; };
 		08341C1620E26A33002068C4 /* birdRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1320E26A33002068C4 /* birdRed.atlas */; };
 		08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 08341C1420E26A33002068C4 /* birdYellow.atlas */; };
@@ -20,7 +20,6 @@
 		084797CE20EBA9130094E4B1 /* walkingCatLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 084797CD20EBA9130094E4B1 /* walkingCatLeft.atlas */; };
 		084797D020EBAC6D0094E4B1 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084797CF20EBAC6D0094E4B1 /* Direction.swift */; };
 		084903A020E61A86008A14DB /* BirdGameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0849039F20E61A86008A14DB /* BirdGameListViewModel.swift */; };
-		084903A420E61C46008A14DB /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 084903A320E61C46008A14DB /* songs.json */; };
 		084903A620E61C86008A14DB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084903A520E61C86008A14DB /* Song.swift */; };
 		084903AA20E642FD008A14DB /* ClosedRange+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084903A920E642FD008A14DB /* ClosedRange+Extensions.swift */; };
 		084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E10D620D92A9A0041B13A /* AppDelegate.swift */; };
@@ -31,17 +30,12 @@
 		084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 084E10EC20D92F440041B13A /* GoogleService-Info.plist */; };
 		0864C14C21C2C198009DD757 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864C14B21C2C198009DD757 /* Game.swift */; };
 		0864C15E21C2CAED009DD757 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864C15D21C2CAED009DD757 /* Kind.swift */; };
-		0870ED0520E4FEF9001CEB22 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */; };
 		0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0720E50561001CEB22 /* FirebaseService.swift */; };
 		0870ED0B20E505B5001CEB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0A20E505B5001CEB22 /* User.swift */; };
 		0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */; };
-		0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */; };
 		0870ED1420E51E61001CEB22 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1320E51E61001CEB22 /* String+Extensions.swift */; };
 		0870ED1620E525B2001CEB22 /* UIViewContoller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1520E525B2001CEB22 /* UIViewContoller+Extensions.swift */; };
 		0870ED1820E52692001CEB22 /* BirdGameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1720E52692001CEB22 /* BirdGameListViewController.swift */; };
-		089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826620D93534006A2DCB /* WelcomeViewController.swift */; };
-		089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826820D9356D006A2DCB /* LoginViewController.swift */; };
-		089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826A20D93639006A2DCB /* RegisterViewController.swift */; };
 		089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826C20D952E4006A2DCB /* IdentifyUser.swift */; };
 		089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C826E20D95591006A2DCB /* DefaultsKeys.swift */; };
 		08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AE09FA20E38FBA00DB74C5 /* Bird.swift */; };
@@ -54,19 +48,25 @@
 		08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */; };
 		08BD41F120E0FAD0005EC831 /* Level03MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */; };
 		08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */; };
-		08BD41F520E120EB005EC831 /* GameBirdLevel01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */; };
-		08BD41F820E12246005EC831 /* BirdGameLevel01Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F720E12246005EC831 /* BirdGameLevel01Scene.swift */; };
+		08BD41F520E120EB005EC831 /* BirdLevel1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F420E120EB005EC831 /* BirdLevel1ViewController.swift */; };
+		08BD41F820E12246005EC831 /* BirdLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD41F720E12246005EC831 /* BirdLevel1Scene.swift */; };
 		08F01BCD20EA880800842554 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BCC20EA880800842554 /* Cat.swift */; };
 		08F01BCF20EA883D00842554 /* GameCatLevel01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BCE20EA883D00842554 /* GameCatLevel01ViewController.swift */; };
-		08F01BD120EA88CF00842554 /* CatGameLevel01Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD020EA88CF00842554 /* CatGameLevel01Scene.swift */; };
-		08F01BD320EA89BF00842554 /* CatGameLevel01Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD220EA89BF00842554 /* CatGameLevel01Properties.swift */; };
+		08F01BD120EA88CF00842554 /* CatLevel1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD020EA88CF00842554 /* CatLevel1Scene.swift */; };
+		08F01BD320EA89BF00842554 /* CatLevel1Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD220EA89BF00842554 /* CatLevel1Game.swift */; };
 		08F01BD520EA89DC00842554 /* PentatonNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD420EA89DC00842554 /* PentatonNote.swift */; };
 		08F01BD720EA8E9700842554 /* CoordinateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F01BD620EA8E9700842554 /* CoordinateConverter.swift */; };
+		08F22D2321C39B30003B31B3 /* JSONSerialization+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F22D2221C39B30003B31B3 /* JSONSerialization+Extensions.swift */; };
+		08F22D2521C39EFF003B31B3 /* SongsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F22D2421C39EFF003B31B3 /* SongsService.swift */; };
+		08F22D2721C39FF6003B31B3 /* bird_level1_song1.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F22D2621C39FF6003B31B3 /* bird_level1_song1.json */; };
+		08F22D2A21C3A06E003B31B3 /* bird_level1_song3.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F22D2821C3A06E003B31B3 /* bird_level1_song3.json */; };
+		08F22D2B21C3A06E003B31B3 /* bird_level1_song2.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F22D2921C3A06E003B31B3 /* bird_level1_song2.json */; };
+		08F22D2D21C3A30F003B31B3 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F22D2C21C3A30F003B31B3 /* Songs.swift */; };
 		9F91111B5132BEB7DDA2C320 /* Pods_Treble_Clef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08341C0F20E232D6002068C4 /* BirdGameLevel01Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameLevel01Properties.swift; sourceTree = "<group>"; };
+		08341C0F20E232D6002068C4 /* BirdLevel1Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdLevel1Game.swift; sourceTree = "<group>"; };
 		08341C1120E26259002068C4 /* BirdTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdTextures.swift; sourceTree = "<group>"; };
 		08341C1320E26A33002068C4 /* birdRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdRed.atlas; sourceTree = "<group>"; };
 		08341C1420E26A33002068C4 /* birdYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = birdYellow.atlas; sourceTree = "<group>"; };
@@ -79,7 +79,6 @@
 		084797CD20EBA9130094E4B1 /* walkingCatLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingCatLeft.atlas; sourceTree = "<group>"; };
 		084797CF20EBAC6D0094E4B1 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		0849039F20E61A86008A14DB /* BirdGameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameListViewModel.swift; sourceTree = "<group>"; };
-		084903A320E61C46008A14DB /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
 		084903A520E61C86008A14DB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		084903A920E642FD008A14DB /* ClosedRange+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClosedRange+Extensions.swift"; sourceTree = "<group>"; };
 		084E10D320D92A9A0041B13A /* Treble Clef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treble Clef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,17 +91,12 @@
 		084E10EC20D92F440041B13A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0864C14B21C2C198009DD757 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0864C15D21C2CAED009DD757 /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
-		0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0870ED0720E50561001CEB22 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0870ED0A20E505B5001CEB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
-		0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		0870ED1320E51E61001CEB22 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0870ED1520E525B2001CEB22 /* UIViewContoller+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Extensions.swift"; sourceTree = "<group>"; };
 		0870ED1720E52692001CEB22 /* BirdGameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameListViewController.swift; sourceTree = "<group>"; };
-		089C826620D93534006A2DCB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		089C826820D9356D006A2DCB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		089C826A20D93639006A2DCB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		089C826C20D952E4006A2DCB /* IdentifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyUser.swift; sourceTree = "<group>"; };
 		089C826E20D95591006A2DCB /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		08AE09FA20E38FBA00DB74C5 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
@@ -115,14 +109,20 @@
 		08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level02MenuViewContoller.swift; sourceTree = "<group>"; };
 		08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level03MenuViewController.swift; sourceTree = "<group>"; };
 		08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBirdLevel01ViewController.swift; sourceTree = "<group>"; };
-		08BD41F720E12246005EC831 /* BirdGameLevel01Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdGameLevel01Scene.swift; sourceTree = "<group>"; };
+		08BD41F420E120EB005EC831 /* BirdLevel1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdLevel1ViewController.swift; sourceTree = "<group>"; };
+		08BD41F720E12246005EC831 /* BirdLevel1Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdLevel1Scene.swift; sourceTree = "<group>"; };
 		08F01BCC20EA880800842554 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		08F01BCE20EA883D00842554 /* GameCatLevel01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCatLevel01ViewController.swift; sourceTree = "<group>"; };
-		08F01BD020EA88CF00842554 /* CatGameLevel01Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGameLevel01Scene.swift; sourceTree = "<group>"; };
-		08F01BD220EA89BF00842554 /* CatGameLevel01Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatGameLevel01Properties.swift; sourceTree = "<group>"; };
+		08F01BD020EA88CF00842554 /* CatLevel1Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatLevel1Scene.swift; sourceTree = "<group>"; };
+		08F01BD220EA89BF00842554 /* CatLevel1Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatLevel1Game.swift; sourceTree = "<group>"; };
 		08F01BD420EA89DC00842554 /* PentatonNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentatonNote.swift; sourceTree = "<group>"; };
 		08F01BD620EA8E9700842554 /* CoordinateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateConverter.swift; sourceTree = "<group>"; };
+		08F22D2221C39B30003B31B3 /* JSONSerialization+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONSerialization+Extensions.swift"; sourceTree = "<group>"; };
+		08F22D2421C39EFF003B31B3 /* SongsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsService.swift; sourceTree = "<group>"; };
+		08F22D2621C39FF6003B31B3 /* bird_level1_song1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bird_level1_song1.json; sourceTree = "<group>"; };
+		08F22D2821C3A06E003B31B3 /* bird_level1_song3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bird_level1_song3.json; sourceTree = "<group>"; };
+		08F22D2921C3A06E003B31B3 /* bird_level1_song2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bird_level1_song2.json; sourceTree = "<group>"; };
+		08F22D2C21C3A30F003B31B3 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
 		0DC08BDC5CA0D3C004568D8A /* Pods-Treble Clef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.release.xcconfig"; sourceTree = "<group>"; };
 		2B6C27C27E4D9EBF1CC6DB7A /* Pods-Treble Clef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treble Clef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef.debug.xcconfig"; sourceTree = "<group>"; };
 		7B5A79196FD935507799CF8F /* Pods_Treble_Clef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treble_Clef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,12 +164,14 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		084903A220E61C3A008A14DB /* Json */ = {
+		084903A220E61C3A008A14DB /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				084903A320E61C46008A14DB /* songs.json */,
+				08F22D2621C39FF6003B31B3 /* bird_level1_song1.json */,
+				08F22D2921C3A06E003B31B3 /* bird_level1_song2.json */,
+				08F22D2821C3A06E003B31B3 /* bird_level1_song3.json */,
 			);
-			path = Json;
+			path = Songs;
 			sourceTree = "<group>";
 		};
 		084E10CA20D92A9A0041B13A = {
@@ -204,7 +206,7 @@
 				08F22D2121C39838003B31B3 /* Sprite Models */,
 				084E10E820D92AF60041B13A /* Model */,
 				084797C820EB80F30094E4B1 /* Enums */,
-				084903A220E61C3A008A14DB /* Json */,
+				084903A220E61C3A008A14DB /* Songs */,
 				084E10EB20D92B230041B13A /* Support Files */,
 				08AE09FC20E3BBD500DB74C5 /* Sound files */,
 				08341C1920E26B31002068C4 /* Image Assets */,
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				084903A520E61C86008A14DB /* Song.swift */,
+				08F22D2C21C3A30F003B31B3 /* Songs.swift */,
 				0870ED0A20E505B5001CEB22 /* User.swift */,
 				0864C14B21C2C198009DD757 /* Game.swift */,
 				0864C15D21C2CAED009DD757 /* Kind.swift */,
@@ -230,9 +233,6 @@
 				08F01BCA20EA85B700842554 /* Menus */,
 				08341C1A20E288B2002068C4 /* LoadingViewController.swift */,
 				08BD41F220E0FAEA005EC831 /* SettingsViewController.swift */,
-				089C826620D93534006A2DCB /* WelcomeViewController.swift */,
-				089C826A20D93639006A2DCB /* RegisterViewController.swift */,
-				089C826820D9356D006A2DCB /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,6 +262,7 @@
 				0870ED1320E51E61001CEB22 /* String+Extensions.swift */,
 				0870ED1520E525B2001CEB22 /* UIViewContoller+Extensions.swift */,
 				084903A920E642FD008A14DB /* ClosedRange+Extensions.swift */,
+				08F22D2221C39B30003B31B3 /* JSONSerialization+Extensions.swift */,
 				084797C620EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift */,
 			);
 			path = Extensions;
@@ -270,8 +271,6 @@
 		0870ED0320E4FEE1001CEB22 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0870ED0420E4FEF9001CEB22 /* LoginViewModel.swift */,
-				0870ED1120E51ABD001CEB22 /* RegisterViewModel.swift */,
 				0849039F20E61A86008A14DB /* BirdGameListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -281,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				0870ED0720E50561001CEB22 /* FirebaseService.swift */,
+				08F22D2421C39EFF003B31B3 /* SongsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,8 +311,8 @@
 		08BD41F620E12211005EC831 /* Level1Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				08BD41F720E12246005EC831 /* BirdGameLevel01Scene.swift */,
-				08F01BD020EA88CF00842554 /* CatGameLevel01Scene.swift */,
+				08BD41F720E12246005EC831 /* BirdLevel1Scene.swift */,
+				08F01BD020EA88CF00842554 /* CatLevel1Scene.swift */,
 			);
 			path = Level1Scenes;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 		08F01BCB20EA85C500842554 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				08BD41F420E120EB005EC831 /* GameBirdLevel01ViewController.swift */,
+				08BD41F420E120EB005EC831 /* BirdLevel1ViewController.swift */,
 				08F01BCE20EA883D00842554 /* GameCatLevel01ViewController.swift */,
 			);
 			path = Games;
@@ -343,8 +343,8 @@
 			children = (
 				08AE09FA20E38FBA00DB74C5 /* Bird.swift */,
 				08F01BCC20EA880800842554 /* Cat.swift */,
-				08341C0F20E232D6002068C4 /* BirdGameLevel01Properties.swift */,
-				08F01BD220EA89BF00842554 /* CatGameLevel01Properties.swift */,
+				08341C0F20E232D6002068C4 /* BirdLevel1Game.swift */,
+				08F01BD220EA89BF00842554 /* CatLevel1Game.swift */,
 			);
 			path = "Sprite Models";
 			sourceTree = "<group>";
@@ -428,9 +428,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				08AE0A0320E3BC7F00DB74C5 /* do.wav in Resources */,
+				08F22D2721C39FF6003B31B3 /* bird_level1_song1.json in Resources */,
 				08AE0A0220E3BC7F00DB74C5 /* mi.wav in Resources */,
+				08F22D2B21C3A06E003B31B3 /* bird_level1_song2.json in Resources */,
 				084E10E120D92A9B0041B13A /* LaunchScreen.storyboard in Resources */,
-				084903A420E61C46008A14DB /* songs.json in Resources */,
 				08341C1620E26A33002068C4 /* birdRed.atlas in Resources */,
 				08341C1720E26A33002068C4 /* birdYellow.atlas in Resources */,
 				08AE0A0420E3BC7F00DB74C5 /* re.wav in Resources */,
@@ -440,6 +441,7 @@
 				084E10DE20D92A9B0041B13A /* Assets.xcassets in Resources */,
 				08AE0A0520E3BC7F00DB74C5 /* la.wav in Resources */,
 				08AE0A0620E3BC7F00DB74C5 /* sol.wav in Resources */,
+				08F22D2A21C3A06E003B31B3 /* bird_level1_song3.json in Resources */,
 				08341C1820E26A33002068C4 /* birdBlue.atlas in Resources */,
 				084E10DC20D92A9A0041B13A /* Main.storyboard in Resources */,
 			);
@@ -457,8 +459,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -466,8 +469,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -504,24 +508,21 @@
 				0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */,
 				08F01BCF20EA883D00842554 /* GameCatLevel01ViewController.swift in Sources */,
 				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
-				0870ED0520E4FEF9001CEB22 /* LoginViewModel.swift in Sources */,
 				083E13CF20ECDE1F00981B1D /* CheckUser.swift in Sources */,
 				089C826D20D952E4006A2DCB /* IdentifyUser.swift in Sources */,
 				08341C1B20E288B2002068C4 /* LoadingViewController.swift in Sources */,
-				08F01BD320EA89BF00842554 /* CatGameLevel01Properties.swift in Sources */,
+				08F01BD320EA89BF00842554 /* CatLevel1Game.swift in Sources */,
 				084903AA20E642FD008A14DB /* ClosedRange+Extensions.swift in Sources */,
 				08341C1220E26259002068C4 /* BirdTextures.swift in Sources */,
-				08BD41F820E12246005EC831 /* BirdGameLevel01Scene.swift in Sources */,
+				08BD41F820E12246005EC831 /* BirdLevel1Scene.swift in Sources */,
 				084903A020E61A86008A14DB /* BirdGameListViewModel.swift in Sources */,
 				08AE09FB20E38FBA00DB74C5 /* Bird.swift in Sources */,
 				08BD41F320E0FAEA005EC831 /* SettingsViewController.swift in Sources */,
 				08F01BD520EA89DC00842554 /* PentatonNote.swift in Sources */,
-				08F01BD120EA88CF00842554 /* CatGameLevel01Scene.swift in Sources */,
+				08F01BD120EA88CF00842554 /* CatLevel1Scene.swift in Sources */,
 				0864C14C21C2C198009DD757 /* Game.swift in Sources */,
-				08341C1020E232D6002068C4 /* BirdGameLevel01Properties.swift in Sources */,
-				089C826920D9356D006A2DCB /* LoginViewController.swift in Sources */,
+				08341C1020E232D6002068C4 /* BirdLevel1Game.swift in Sources */,
 				0864C15E21C2CAED009DD757 /* Kind.swift in Sources */,
-				0870ED1220E51ABD001CEB22 /* RegisterViewModel.swift in Sources */,
 				0870ED1620E525B2001CEB22 /* UIViewContoller+Extensions.swift in Sources */,
 				084797C520EB6FDC0094E4B1 /* CatTextures.swift in Sources */,
 				084797C720EB7D1E0094E4B1 /* SKSpriteNode+Extensions.swift in Sources */,
@@ -529,15 +530,16 @@
 				0870ED1420E51E61001CEB22 /* String+Extensions.swift in Sources */,
 				084797D020EBAC6D0094E4B1 /* Direction.swift in Sources */,
 				0870ED1820E52692001CEB22 /* BirdGameListViewController.swift in Sources */,
-				089C826B20D93639006A2DCB /* RegisterViewController.swift in Sources */,
-				089C826720D93534006A2DCB /* WelcomeViewController.swift in Sources */,
 				089C826F20D95591006A2DCB /* DefaultsKeys.swift in Sources */,
+				08F22D2321C39B30003B31B3 /* JSONSerialization+Extensions.swift in Sources */,
 				0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */,
 				084E10D920D92A9A0041B13A /* MainMenuViewController.swift in Sources */,
 				0870ED0B20E505B5001CEB22 /* User.swift in Sources */,
 				084903A620E61C86008A14DB /* Song.swift in Sources */,
-				08BD41F520E120EB005EC831 /* GameBirdLevel01ViewController.swift in Sources */,
+				08F22D2521C39EFF003B31B3 /* SongsService.swift in Sources */,
+				08BD41F520E120EB005EC831 /* BirdLevel1ViewController.swift in Sources */,
 				084E10D720D92A9A0041B13A /* AppDelegate.swift in Sources */,
+				08F22D2D21C3A30F003B31B3 /* Songs.swift in Sources */,
 				08F01BCD20EA880800842554 /* Cat.swift in Sources */,
 				08F01BD720EA8E9700842554 /* CoordinateConverter.swift in Sources */,
 				08BD41ED20E0FAB4005EC831 /* Level01MenuViewController.swift in Sources */,

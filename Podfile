@@ -9,7 +9,7 @@ target 'Treble Clef' do
 	pod 'Firebase'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
-	pod 'SVProgressHUD'    
-    pod 'SwiftyJSON'
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
 
 end

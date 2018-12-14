@@ -9,13 +9,8 @@
 
 import Foundation
 
-enum Kind {
-    case bird1
-    case bird2
-    case bird3
-    case cat1
-    case cat2
-    case cat3
-    case rainbow1
-    case rainbow2
+enum Kind: String, CaseIterable {
+    case bird
+    case cat
+    case rainbow
 }

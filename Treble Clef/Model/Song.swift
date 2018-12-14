@@ -8,27 +8,26 @@
 
 import Foundation
 
-class Song {
+struct Song: Codable {
     
+    let id: String
     let name: String
     let keynote: String
-    var notes: [PentatonNote] = []
+    let notes: [PentatonNote]
+    let possibleNotes: [PentatonNote]
     
-    init(name: String, notes: [String], keynote: String) {
-        self.name = name // és ha nincs? ezeket majd lekezelem
+    init(id: String, name: String, keynote: String, notes: [String], possibleNotes: [String]) {
+        self.id = id
+        self.name = name
         self.keynote = keynote
-        self.notes = getNotes(notes: notes)
+        self.notes = PentatonNote.getNotesByString(notes)
+        self.possibleNotes = PentatonNote.getNotesByString(possibleNotes)
     }
     
-    func getNotes(notes: [String]) -> [PentatonNote] {
-        var n:[PentatonNote] = []
-        
-        for note in notes {
-            if let noteEnum = PentatonNote.getNoteByString(note: note) {
-                n.append(noteEnum)
-            }
-        }
-        return n
+    func score() -> Int {
+        return notes.count
     }
     
 }
+
+

@@ -26,22 +26,22 @@ class BirdGameListViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.backgroundColor = UIColor.clear
-        cell.textLabel?.text = viewModel.getSongsFromJSON()[indexPath.row].name
+        cell.textLabel?.text = SongsService.getSongsFromJSON()[indexPath.row].name
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getSongsFromJSON().count
+        return SongsService.getSongsFromJSON().count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedSong = viewModel.getSongsFromJSON()[indexPath.row]
+        selectedSong = SongsService.getSongsFromJSON()[indexPath.row]
         performSegue(withIdentifier: "goToBirdGame", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToBirdGame" {
-            let destinationVC = segue.destination as! GameBirdLevel01ViewController
+            let destinationVC = segue.destination as! BirdLevel1ViewController
             destinationVC.song = selectedSong
         }
     }

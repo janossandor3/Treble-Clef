@@ -1,0 +1,7 @@
+{
+    "id": "bird_level1_song3",
+    "name": "Song 03",
+    "keynote": "C",
+    "notes": ["re","mi","re","doh","sol","la"],
+    "possibleNotes": ["doh","re","mi","sol","la"]
+}

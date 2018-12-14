@@ -8,9 +8,12 @@
 
 import Foundation
 
-struct Game {
-    var ID: String
-    var song: Song?
-    var kind: Kind
-    var score: Int64
+protocol Game {
+    var song: Song { get }
+    var kind: Kind { get }
+}
+
+extension Game {
+    var ID: String { return song.name }
+    var score: Int64 { return Int64(song.score()) }
 }

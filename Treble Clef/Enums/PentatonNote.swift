@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PentatonNote: CaseIterable {
+enum PentatonNote: String, CaseIterable, Codable {
     case doh, re, mi, sol, la
     
     var soundFile: String {
@@ -32,10 +32,22 @@ enum PentatonNote: CaseIterable {
                                                     "sol": .sol,
                                                     "la": .la];
     
-    static func getNoteByString(note: String) -> PentatonNote? {
+    static func getNoteByString(_ note: String) -> PentatonNote? {
         guard let type = noteDict[note] else {
             return nil
         }
         return type
+    }
+    
+    static func getNotesByString(_ notes: [String]) -> [PentatonNote] {
+        var pentatoneNotes:[PentatonNote] = []
+        
+        notes.forEach { note in
+            if let pentatoneNote = PentatonNote.getNoteByString(note) {
+                pentatoneNotes.append(pentatoneNote)
+            }
+        }
+        
+        return pentatoneNotes
     }
 }

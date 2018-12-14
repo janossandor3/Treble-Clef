@@ -25,10 +25,7 @@ class LoadingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToWelcome" {
-            let destinationWelcome = segue.destination as! WelcomeViewController
-            destinationWelcome.delegate = self
-        } else if segue.identifier == "goToMainMenu" {
+        if segue.identifier == "goToMainMenu" {
             let destinationMainMenu = segue.destination as! MainMenuViewController
             destinationMainMenu.delegate = self
         }
@@ -38,13 +35,13 @@ class LoadingViewController: UIViewController {
 extension LoadingViewController: CheckUser {
     
     func checkUser() {
-        let defaults = UserDefaults()
-        let profileId = defaults.string(forKey: DefaulsKeys.PROFILE_ID)
-        if  profileId == nil {
-            performSegue(withIdentifier: "goToWelcome", sender: self)
-        } else {
+//        let defaults = UserDefaults()
+//        let profileId = defaults.string(forKey: DefaulsKeys.PROFILE_ID)
+//        if  profileId == nil {
+//            performSegue(withIdentifier: "goToWelcome", sender: self)
+//        } else {
             performSegue(withIdentifier: "goToMainMenu", sender: self)
-        }
+//        }
     }
     
 }

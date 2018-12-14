@@ -14,7 +14,7 @@ class GameCatLevel01ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = CatGameLevel01Scene(size: view.bounds.size, scoreToEarn: CatGameLevel01Properties().scoreToEarn) { [unowned self] in
+        let scene = CatLevel1Scene(size: view.bounds.size, scoreToEarn: CatLevel1Game().notes.count ) { [unowned self] in
                 self.navigationController?.popViewController(animated: true)
         }
         self.view = SKView(frame: CGRect(x: view.bounds.maxX * 0.5, y: view.bounds.maxY * 0.5, width: view.bounds.maxX, height: view.bounds.maxY))
