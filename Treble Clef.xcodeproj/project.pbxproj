@@ -30,7 +30,6 @@
 		084E10ED20D92F440041B13A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 084E10EC20D92F440041B13A /* GoogleService-Info.plist */; };
 		0864C14C21C2C198009DD757 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864C14B21C2C198009DD757 /* Game.swift */; };
 		0864C15E21C2CAED009DD757 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0864C15D21C2CAED009DD757 /* Kind.swift */; };
-		0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0720E50561001CEB22 /* FirebaseService.swift */; };
 		0870ED0B20E505B5001CEB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0A20E505B5001CEB22 /* User.swift */; };
 		0870ED1020E518FB001CEB22 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */; };
 		0870ED1420E51E61001CEB22 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870ED1320E51E61001CEB22 /* String+Extensions.swift */; };
@@ -91,7 +90,6 @@
 		084E10EC20D92F440041B13A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0864C14B21C2C198009DD757 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0864C15D21C2CAED009DD757 /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
-		0870ED0720E50561001CEB22 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0870ED0A20E505B5001CEB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0870ED0F20E518FB001CEB22 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		0870ED1320E51E61001CEB22 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 		0870ED0620E50549001CEB22 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0870ED0720E50561001CEB22 /* FirebaseService.swift */,
 				08F22D2421C39EFF003B31B3 /* SongsService.swift */,
 			);
 			path = Services;
@@ -321,8 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				084E10D820D92A9A0041B13A /* MainMenuViewController.swift */,
-				08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */,
 				0870ED1720E52692001CEB22 /* BirdGameListViewController.swift */,
+				08BD41EC20E0FAB4005EC831 /* Level01MenuViewController.swift */,
 				08BD41EE20E0FAC5005EC831 /* Level02MenuViewContoller.swift */,
 				08BD41F020E0FAD0005EC831 /* Level03MenuViewController.swift */,
 			);
@@ -456,28 +453,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Treble Clef/Pods-Treble Clef-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE43AFD2BEB3B17780981264 /* [CP] Check Pods Manifest.lock */ = {
@@ -505,7 +494,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0870ED0820E50561001CEB22 /* FirebaseService.swift in Sources */,
 				08F01BCF20EA883D00842554 /* GameCatLevel01ViewController.swift in Sources */,
 				08BD41EF20E0FAC5005EC831 /* Level02MenuViewContoller.swift in Sources */,
 				083E13CF20ECDE1F00981B1D /* CheckUser.swift in Sources */,

@@ -5,11 +5,6 @@ target 'Treble Clef' do
   use_frameworks!
 
   # Pods for Treble Clef
-	pod 'Firebase/Core'
-	pod 'Firebase'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Database'
-    pod 'RxSwift',    '~> 4.0'
-    pod 'RxCocoa',    '~> 4.0'
-
+	pod 'RxSwift',    '~> 4.0'
+    	pod 'RxCocoa',    '~> 4.0'
 end

@@ -7,7 +7,6 @@
 //
 
 import SpriteKit
-import Firebase
 
 
 class CatLevel1Scene: SKScene {

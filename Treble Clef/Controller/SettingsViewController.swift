@@ -8,13 +8,11 @@
 
 
 import UIKit
-import Firebase
 
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var userLevel: UILabel!
-
-    private let fir = FirebaseService()
+    
     var logoutClicked: (() -> Void)?
     
     override func viewDidLoad() {

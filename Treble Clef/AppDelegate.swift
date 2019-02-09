@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sets the translucent background color
         UINavigationBar.appearance().backgroundColor = .clear
         
-        FirebaseApp.configure()
         return true
     }
 

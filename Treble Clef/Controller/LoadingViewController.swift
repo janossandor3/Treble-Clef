@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class LoadingViewController: UIViewController {
     
@@ -35,13 +34,7 @@ class LoadingViewController: UIViewController {
 extension LoadingViewController: CheckUser {
     
     func checkUser() {
-//        let defaults = UserDefaults()
-//        let profileId = defaults.string(forKey: DefaulsKeys.PROFILE_ID)
-//        if  profileId == nil {
-//            performSegue(withIdentifier: "goToWelcome", sender: self)
-//        } else {
-            performSegue(withIdentifier: "goToMainMenu", sender: self)
-//        }
+        performSegue(withIdentifier: "goToMainMenu", sender: self)
     }
     
 }
